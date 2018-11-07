@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["merch"],{b450:function(e,n,t){"use strict";t.r(n);var c=function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("v-layout",[t("h1",[e._v("Merch")])])},l=[],r=t("2877"),u={},o=Object(r["a"])(u,c,l,!1,null,null,null);o.options.__file="Merch.vue";n["default"]=o.exports}}]);
+//# sourceMappingURL=merch.64d07cec.js.map
