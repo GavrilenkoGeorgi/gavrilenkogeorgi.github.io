@@ -1,6 +1,6 @@
 {
-    "name": "MaxDog grooming and dog training",
-    "short_name": "MaxDog",
+    "name": "Gavrilenko Home Page",
+    "short_name": "Placeholder",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#7b96ad",
-    "background_color": "#7b96ad",
+    "theme_color": "#3342c0",
+    "background_color": "#3342c0",
     "display": "standalone"
 }
