@@ -18,6 +18,7 @@ object {
   color: white;
   font-family: 'Montserrat', sans-serif;
   font-weight: 350;
+  text-decoration: none;
 }
 
 .header:hover {
