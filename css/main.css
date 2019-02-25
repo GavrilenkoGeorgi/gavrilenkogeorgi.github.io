@@ -1,6 +1,6 @@
 body {
   background-image:url(../images/background.jpg);
-  height: 100vh;
+  /* height: 100vh; */
   padding: 0px;
   margin: 0px;
   background-size: cover;
@@ -11,7 +11,7 @@ object {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 1.2em;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
   color: white;
@@ -22,6 +22,7 @@ h1 {
 
 .svg-icon {
   height: 10em;
+  padding-top: 7em;
   text-align: center;
 }
 
@@ -103,8 +104,8 @@ section {
 }
 
 .animated.slow {
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
 }
 
 @media (print), (prefers-reduced-motion) {
