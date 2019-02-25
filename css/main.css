@@ -1,23 +1,28 @@
 body {
   background-image:url(../images/background.jpg);
-  /* height: 100vh; */
   padding: 0px;
   margin: 0px;
   background-size: cover;
+  text-align: center;
 }
 
 object {
   pointer-events: none;
 }
 
-h1 {
-  font-size: 1.2em;
+.header {
+  padding: 2em 0em 2em 0em;
+  font-size: 1.3em;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
   color: white;
   font-family: 'Montserrat', sans-serif;
   font-weight: 350;
-  letter-spacing: .05em;
+}
+
+.header:hover {
+  color: #3342c0;
+  transition: color 1s ease-in-out;
 }
 
 .svg-icon {
