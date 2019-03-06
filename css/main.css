@@ -1,33 +1,90 @@
+:root {
+  --primary-color: #3342c0;
+  --social-icons-color: #3342c0;
+  --pale-primary-color: #8995ff;
+  --highlight-color: #ffa500;
+  --text-light-color: #fff;
+  --default-font: 'Montserrat', sans-serif;
+}
+
 body {
   background-image:url(../images/background.jpg);
   padding: 0px;
   margin: 0px;
   background-size: cover;
   text-align: center;
+  flex-basis: 1;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-
 object {
   pointer-events: none;
 }
+article {
+  padding-bottom: 1em;
+}
 
 .header {
-  padding: 2em 0em 2em 0em;
   font-size: 1.3em;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
   color: white;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--default-font);
   font-weight: 350;
 }
 
 .header:hover {
-  color: #3342c0;
+  color: #006eff;
   transition: color 1s ease-in-out;
 }
 
-.svg-icon {
-  height: 10em;
-  padding-top: 7em;
+.project-descr {
+  /* border: 1px solid green; */
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--default-font);
+  font-size: 1.075em;
+  padding: .5em .5em .5em .5em;
+}
+
+.project-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* border: 1px solid pink; */
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.project-links > a {
+  color: white;
+  letter-spacing: .1em;
+}
+
+.project-links:hover object {
+  animation-name: pulse;
+}
+
+.project-description-text {
+  color: var(--text-light-color);
+  font-family: var(--default-font);
+  text-align: left;
+  letter-spacing: .075em;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.project-description-text > li {
+  padding: .1em 0em .1em 0em;
+}
+
+.project-description-text > li > a {
+  color: var(--pale-primary-color);
+}
+
+.logo-icon {
+  height: 7em;
   text-align: center;
 }
 
@@ -38,17 +95,22 @@ object {
 .png-icon-social {
   height: 2em;
 }
-section {
-  height: 100%;
+
+.header-and-logo {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-bottom: 1em;
 }
 
 .social-links {
-  padding: 7em 0em 0em 0em;
   display: flex;
   justify-content: space-around;
+  padding: 1em 0em 1em 0em;
+}
+
+.social-links > a:hover {
+  animation-name: pulse;
 }
 
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
