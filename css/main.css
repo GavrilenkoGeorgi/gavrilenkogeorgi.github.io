@@ -75,11 +75,11 @@ article {
 }
 
 .project-description-text > li {
-  padding: .75em 0em .75em 0em;
+  padding: .05em 0em .05em 0em;
 }
 
 .project-description-text > li > a {
-  color: var(--pale-primary-color);
+  color: var(--primary-color);
 }
 
 .logo-icon {
@@ -99,7 +99,6 @@ article {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: 1em;
 }
 
 .social-links {
