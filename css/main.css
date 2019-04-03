@@ -10,6 +10,11 @@
   --lightest-color: rgb(95, 95, 95);
   --some-color: #a8a8a8;
   --almost-white: #eeeeee;
+  --dark: rgb(83, 83, 83);
+  --darker: black;
+}
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -18,19 +23,37 @@ body {
   padding: 0px;
   margin: 0px;
   background-size: cover;
-  text-align: center;
-  flex-basis: 1;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   font-family: var(--default-font);
 }
 
 main {
-  padding: 0em 1em 0em 1em;
+  padding: 2em 2em 0em 2em;
   text-align: left;
   background-color: var(--page-background-color);
 }
+
+.resume-link-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.resume-download-icon {
+  height: 2em;
+  margin-left: .5em;
+}
+
+.resume-download-link {
+  display: inherit;
+  align-items: center;
+  color: var(--pale-primary-color);
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
 .intro {
   color: var(--text-light-color);
   font-size: 1.4em;
@@ -46,13 +69,17 @@ object {
   pointer-events: none;
 }
 
-.header {
+.logo-icon {
+  height: 3em;
+  text-align: center;
+}
+
+.header-link {
   display: flex;
   align-content: center;
   align-items: center;
   justify-content: center;
   justify-items: center;
-  padding-bottom: .25em;
   font-size: 1.3em;
   text-align: center;
   color: var(--almost-white);
@@ -65,15 +92,52 @@ object {
   transition: color 1s ease-in-out;
 }
 
+.project-img {
+  width: 100%;
+  display: block;
+  box-shadow: 0px 0px 5px 0px rgba(134, 134, 134, 0.75);
+  margin-bottom: .33em;
+}
+
+
+.main-info {
+  width: 100%;
+}
+
 .project-descr {
-  /* border: 1px solid green; */
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   font-family: var(--default-font);
-  font-size: 1.075em;
-  padding: .5em .5em .5em .5em;
+  font-size: 1.3em;
+  padding: 2em .5em .5em .5em;
   z-index: 1;
   background-color: var(--page-background-color);
+}
+
+ul {
+  list-style: none;
+  text-align: left;
+  padding: 0em;
+  margin: 0em;
+}
+
+.image-container {
+  width: 18em;
+  margin-left: 1em;
+  text-align: center;
+}
+
+/* really need sass */
+.image-container > a {
+  color: var(--pale-primary-color);
+}
+
+.descr-container {
+  width: 18em;
+  display: flex;
+  margin-left:1em;
+  /* flex-grow: 1 2 auto; */
+  align-items: center;
 }
 
 .project-links {
@@ -81,8 +145,8 @@ object {
   flex-direction: column;
   justify-content: center;
   /* border: 1px solid pink; */
-  flex-grow: 1;
-  flex-basis: 0;
+  /* flex-grow: 1;
+  flex-basis: 0; */
 }
 
 .project-links > a {
@@ -99,11 +163,8 @@ object {
 }
 
 .project-description-text {
-  color: var(--lightest-color);
-  text-align: left;
-  letter-spacing: .075em;
-  flex-grow: 1;
-  flex-basis: 0;
+  color: var(--dark);
+  padding-left: 1em;
 }
 
 .project-description-text > li {
@@ -111,16 +172,35 @@ object {
 }
 
 .project-description-text > li > a {
-  /* color: var(--primary-color); */
+  color: var(--pale-primary-color);
 }
 
-.logo-icon {
-  height: 100px;
+.photo-divider {
+  background-image:url(../images/bike.jpg);
+  background-color: #cccccc;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
   text-align: center;
+  position: relative;
+  height: 8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: -2;
+  opacity: 0;
 }
+.photo-divider > span {
+  color: white;
+  font-size: 2em;
+  background-color: rgba(44, 44, 44, 0.438);
+  line-height: 2em;
+}
+
 
 .svg-icon-social {
-  height: 2em;
+  height: 1.5em;
 }
 
 .png-icon-social {
@@ -134,24 +214,34 @@ object {
 }
 */
 .header-and-logo {
-  background-image:url(../images/IMG_2911.jpg);
+  background-image:url(../images/iphone.jpg);
   background-color: #cccccc;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  width: 100%;
+  height: 10em;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /*
   position: relative;
   height: 10em;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  z-index: -1;
+*/
+  /* z-index: -1; */
 }
 
 .social-links {
   display: flex;
   justify-content: space-around;
-  padding: 1em 0em 1em 0em;
+  margin-top: 2em;
+  padding: 1em .5em 1em .5em;
   background-color: var(--almost-white);
+  width: 100%;
 }
 
 .social-links > a:hover {
@@ -229,6 +319,107 @@ object {
   }
 }
 
-.svg-icon-project {
-  height: 3.3em;
+.social-links-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+/*
+@media screen and (orientation: landscape) {
+
+}
+*/
+/* desktop */
+@media screen and (max-resolution: 96dpi) and (min-width: 700px) {
+  .header-link {
+    font-size: 2em;
+  }
+  main {
+    /* border: 1px solid pink; */
+    padding: 2em 0em 2em 0em;
+    width: 65%;
+    font-size: 1.5em;
+  }
+  .header-and-logo {
+    height: 20em;
+  }
+  .photo-divider {
+    height: 30em;
+  }
+  .main-info {
+    display: flex;
+  }
+  .project-descr {
+    width: 50%;
+  }
+  .social-links-container {
+    height: 5em;
+    width: 50%;
+  }
+  .svg-icon-social {
+    height: 2em;
+  }
+}
+
+/* ipad */
+@media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px) {
+  .header-link {
+    font-size: 2em;
+  }
+  main {
+    /* border: 1px solid pink; */
+    padding-top: 5em;
+    width: 70%;
+    font-size: 1.2em;
+  }
+  .photo-divider {
+    height: 15em;
+    margin: 3em 0em 3em 0em;
+  }
+  .photo-divider > span {
+    font-size: 3em;
+  }
+  .main-info {
+    display: flex;
+  }
+  .project-descr {
+    width: 50%;
+  }
+  .social-links-container {
+    height: 5em;
+    width: 75%;
+  }
+  .svg-icon-social {
+    height: 2em;
+  }
+}
+
+/* ipadPro */
+@media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px) {
+  .header-and-logo {
+    height: 15em;
+  }
+  .header-link {
+    font-size: 3em;
+  }
+  main {
+    /* border: 1px solid pink; */
+    padding-top: 5em;
+    width: 70%;
+    font-size: 1.7em;
+  }
+  .photo-divider {
+    height: 15em;
+    margin: 3em 0em 3em 0em;
+  }
+  .main-info {
+    display: flex;
+  }
+  .project-descr {
+    width: 50%;
+  }
+  .descr-container {
+    font-size: 1.4em;
+  }
 }
