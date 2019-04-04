@@ -305,6 +305,7 @@ ul {
 
 .hero-image, .details-image {
   position: relative;
+  width: 100%;
   top: 0;
 }
 .hero-parallax-image, .details-parallax-image {
@@ -344,6 +345,9 @@ ul {
 @media screen and (max-resolution: 96dpi) and (min-width: 700px) {
   .hero-parallax-image, .details-parallax-image {
     height: 15em;
+  }
+  .image-title-text {
+    font-size: 3em;
   }
   .header-link {
     font-size: 2em;
