@@ -12,13 +12,13 @@
   --almost-white: #eeeeee;
   --dark: rgb(83, 83, 83);
   --darker: black;
+  --overlay-color: rgba(0, 0, 0, 0.363);
 }
 * {
   box-sizing: border-box;
 }
 
 body {
-  /* background-image:url(../images/background.jpg); */
   background-color: var(--page-background-color);
   padding: 0px;
   margin: 0px;
@@ -31,9 +31,8 @@ body {
 }
 
 main {
-  padding: 2em 2em 0em 2em;
+  padding: 0em 2em 0em 2em;
   text-align: left;
-  background-color: var(--page-background-color);
 }
 
 .resume-link-container {
@@ -109,7 +108,7 @@ object {
   justify-content: center;
   font-family: var(--default-font);
   font-size: 1.3em;
-  padding: 2em .5em .5em .5em;
+  padding: 0em .5em 2em .5em;
   z-index: 1;
   background-color: var(--page-background-color);
 }
@@ -211,29 +210,7 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-*/
-.header-and-logo {
-  background-image:url(../images/iphone.jpg);
-  background-color: #cccccc;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 10em;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  /*
-  position: relative;
-  height: 10em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-*/
-  /* z-index: -1; */
-}
+}*/
 
 .social-links {
   display: flex;
@@ -325,13 +302,49 @@ ul {
   justify-content: space-around;
   align-items: center;
 }
+
+.hero-image, .details-image {
+  position: relative;
+  top: 0;
+}
+.hero-parallax-image, .details-parallax-image {
+  position: relative;
+  top:0;
+  object-fit: cover;
+  width: 100%;
+  height: 10em;
+  z-index: -1;
+}
+.details-image {
+  opacity: 0;
+}
+
+.image-title-text {
+  color: var(--almost-white);
+  font-size: 1.3em;
+  background-color: var(--overlay-color);
+  padding: 0em .3em .1em .3em;
+  line-height: 1.4em;
+  position: relative;
+  bottom: 2em;
+  left: 1em;
+}
+
+.hero-link {
+  color: var(--almost-white);
+}
+
 /*
 @media screen and (orientation: landscape) {
 
 }
 */
+
 /* desktop */
 @media screen and (max-resolution: 96dpi) and (min-width: 700px) {
+  .hero-parallax-image, .details-parallax-image {
+    height: 15em;
+  }
   .header-link {
     font-size: 2em;
   }

@@ -10,14 +10,14 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="manifest" href="/site.webmanifest?v=2">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#3342c0">
     <title>Georgi Gavrilenko</title>
   </head>
   <body>
     <script src="./js/index.js"></script>
-    <section class="header-and-logo">
+    <!--section class="header-and-logo">
         <a href="https://github.com/GavrilenkoGeorgi" class="header-link">
         <object class="logo-icon animated infinite pulse delay-2s slow"
             data="images/baseline-code-24px.svg" type="image/svg+xml">
@@ -25,6 +25,22 @@
         </object>
         github.com/GavrilenkoGeorgi
       </a>
+    </section-->
+    <section>
+      <picture class="hero-image">
+        <source srcset="../images/iphone.webp,
+                        ../images/iphone@2x.webp 2x,
+                        ../images/iphone@3x.webp 3x"
+                type="image/webp">
+        <img class="hero-parallax-image" src="../images/iphone.jpg"
+              srcset="../images/iphone@2x.jpg 2x,
+                      ../images/iphone@3x.jpg 3x"
+              alt="Close up photo of the smartphone">
+        <a class="hero-link" href="https://github.com/GavrilenkoGeorgi">
+          <span class="image-title-text">github.com/GavrilenkoGeorgi</span>
+        </a>
+      </picture>
+      <!--span class="image-title-text">Some details</span-->
     </section>
     <main>
       <div class="resume-link-container">
@@ -43,10 +59,19 @@
         Currently living in Kyiv, can relocate.
       </p>
     </main>
-    <!-- Divider -->
-    <div class="photo-divider">
-      <span>Some more details</span>
-    </div>
+    <!-- Mid page details parallax -->
+    <section>
+      <picture class="details-image">
+        <source srcset="../images/bike.webp 413w,
+                        ../images/bike@2x.webp"
+                type="image/webp">
+        <img class="details-parallax-image" src="../images/bike.jpg"
+              srcset="../images/bike@2x.jpg 413w"
+              alt="Close up photo of the bike">
+        <span class="image-title-text">Some details</span>
+      </picture>
+    </section>
+    <!-- Project descriptions -->
     <article class="main-info">
       <div class="project-descr">
         <div class="image-container">
