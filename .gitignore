@@ -1,4 +1,5 @@
 .DS_Store
-images/largest-iphone.jpg
+images/largest-smartphone.jpg
 images/largest-bike.jpg
 images/background.jpg
+node_modules
