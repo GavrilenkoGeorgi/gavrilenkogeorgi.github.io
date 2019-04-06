@@ -1,3 +1,13 @@
+/* lato-regular - latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'),
+       url('../fonts/lato-v15-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/lato-v15-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 :root {
   --primary-color: #3342c0;
   --social-icons-color: #3342c0;
@@ -5,7 +15,7 @@
   --highlight-color: #ffa500;
   --text-light-color: #444444;
   --header-color: #727272;
-  --default-font: 'Lato', sans-serif;
+  --default-font: 'Lato', Verdana, sans-serif;
   --page-background-color: rgb(255, 255, 255);
   --lightest-color: rgb(95, 95, 95);
   --some-color: #a8a8a8;
@@ -13,6 +23,7 @@
   --dark: rgb(83, 83, 83);
   --darker: black;
   --overlay-color: rgba(0, 0, 0, 0.466);
+  --theme-color: #ccbca2;
 }
 
 * {
@@ -25,6 +36,7 @@ body {
   margin: 0px;
   width: 100%;
   font-family: var(--default-font);
+  direction: ltr;
 }
 
 header {
@@ -34,15 +46,16 @@ header {
 .hero-link {
   color: var(--social-icons-color);
   font-size: .7em;
+  /*
   position: relative;
   bottom: 5.5em;
+  */
   color: var(--almost-white);
 }
 
 .hero-link > h1 {
-  background-color: var(--overlay-color);
   padding: .1em 0em .3em .4em;
-  position: relative;
+  /* position: relative; */
 }
 
 .hero-image, .divider-image {
@@ -50,6 +63,20 @@ header {
   position: relative;
   width: 100%;
   top: 0;
+}
+
+.header-link-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  bottom: 5em;
+  font-size: .8em;
+  background-color: var(--overlay-color);
+}
+
+.header-link-container > .header-github-icon {
+  height: 2em;
+  margin: 0em 0em 0em 1em;
 }
 
 article {
@@ -100,8 +127,9 @@ article {
 
 .details-header {
   position: relative;
-  bottom: 3em;
-  padding: .1em 0em .3em .4em;
+  bottom: 4em;
+  line-height: 2em;
+  padding: .1em 0em .3em .7em;
   color: var(--almost-white);
   background-color: var(--overlay-color);
   opacity: 0;
@@ -150,7 +178,7 @@ ul {
 }
 
 .project-description-text > li > a {
-  color: var(--pale-primary-color);
+  color: var(--social-icons-color);
 }
 
 .social-links {
@@ -204,8 +232,8 @@ object {
     height: 20em;
   }
 
-  .hero-link {
-    font-size: 1.6em;
+  .header-link-container {
+    font-size: 1.em;
   }
 
   .hero-image {
@@ -246,8 +274,16 @@ object {
 
 /* ipad */
 @media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px) {
-  .hero-link {
+  header {
+    height: 25em;
+  }
+  
+  .header-link-container {
     font-size: 1.6em;
+  }
+
+  .hero-image {
+    height: 25em;
   }
 
   .project-descr {
