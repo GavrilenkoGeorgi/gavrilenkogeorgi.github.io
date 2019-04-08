@@ -14,8 +14,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest?v=2">
     <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ccbca2">
-    <title>Gavrilenko resume</title>
+    <meta name="theme-color" content="#efd7b1">
+    <title>Comin out</title>
   </head>
   <body>
     <script src="./js/index.js"></script>
@@ -31,23 +31,23 @@
                       ../images/smartphone@3x.jpg 3x"
               alt="Close up photo of the smartphone">
       </picture>
-      <div class="header-link-container">
+      <!-- Header icon plus h1 -->
+      <a class="hero-link header-link-animation"
+        href="https://github.com/GavrilenkoGeorgi">
         <object
-          class="header-github-icon"
+          class="hero-icon"
           data="icons/github-icon.svg"
           type="image/svg+xml"
           alt="Github icon">
-        <!--img
-          class="png-icon"
-          src="icons/github-icon.png"
-          alt="Github icon" /-->
+          <!--img
+            class="png-icon"
+            src="icons/github-icon.png"
+            alt="Github icon" /-->
         </object>
-        <a class="hero-link background-overlay" href="https://github.com/GavrilenkoGeorgi">
-          <h1 class="hero-header background-overlay">
-            github.com/GavrilenkoGeorgi
-          </h1>
-        </a>
-      </div>
+        <h1>
+          github.com/GavrilenkoGeorgi
+        </h1>
+      </a>
     </header>
     <main>
       <article>
@@ -66,27 +66,55 @@
               download>
               My resume in pdf
             </a>
-            <object
-              class="resume-download-icon"
-              data="icons/baseline-cloud_download-24px.svg"
-              alt="Resume-icon"
-              type="image/svg+xml">
-            </object>
+            <a
+              href="pdf/gavrilenkoResume.pdf"
+              download>
+              <object
+                class="resume-download-icon"
+                data="icons/baseline-cloud_download-24px.svg"
+                alt="Resume-icon"
+                type="image/svg+xml">
+              </object>
+            </a>
           </div>
         </section>
         <!-- Mid page details -->
-        <aside class="details">
+        <object
+          class="more-icon"
+          data="icons/baseline-expand_more-24px.svg"
+          type="image/svg+xml"
+          alt="Code icon">
+          <!--img
+            class="png-icon"
+            src="icons/github-icon.png"
+            alt="Github icon" /-->
+        </object>
+        <aside class="details zero-opacity">
           <picture>
             <source srcset="../images/bike.webp,
                             ../images/bike@2x.webp 2x,
                             ../images/bike@3x.webp 3x"
                     type="image/webp">
-            <img class="divider-image image-cover zero-opacity" src="../images/bike.jpg"
+            <img class="divider-image image-cover"
+                  src="../images/bike.jpg"
                   srcset="../images/bike@2x.jpg 2x,
                           ../images/bike@3x.jpg 3x"
                   alt="Close up photo of the bike">
           </picture>
-          <h2 class="details-header">Some details</h2>
+          <a class="hero-link"
+            href="https://github.com/GavrilenkoGeorgi">
+            <object
+              class="hero-icon"
+              data="icons/baseline-code-24px.svg"
+              type="image/svg+xml"
+              alt="Code icon">
+              <!--img
+                class="png-icon"
+                src="icons/github-icon.png"
+                alt="Github icon" /-->
+            </object>
+            <h2>Some details</h2>
+          </a>
         </aside>
         <!-- Section project descriptions -->
         <section class="details-section">

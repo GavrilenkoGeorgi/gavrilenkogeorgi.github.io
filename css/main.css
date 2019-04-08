@@ -23,10 +23,11 @@
   --dark: rgb(83, 83, 83);
   --darker: black;
   --overlay-color: rgba(0, 0, 0, 0.466);
-  --theme-color: #ccbca2;
+  --theme-color: #efd7b1;
+  --theme-color-darker: #b19363;
 }
 
-* {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
@@ -36,47 +37,42 @@ body {
   margin: 0px;
   width: 100%;
   font-family: var(--default-font);
+  font-size: 16px;
   direction: ltr;
 }
 
+/* header on mobile is this tall */
 header {
-  height: 10em;
+  height: 12em;
 }
 
+/* header image link text */
 .hero-link {
-  color: var(--social-icons-color);
-  font-size: .7em;
-  /*
-  position: relative;
-  bottom: 5.5em;
-  */
-  color: var(--almost-white);
-}
-
-.hero-link > h1 {
-  padding: .1em 0em .3em .4em;
-  /* position: relative; */
-}
-
-.hero-image, .divider-image {
-  height: 10em;
-  position: relative;
-  width: 100%;
-  top: 0;
-}
-
-.header-link-container {
   display: flex;
-  align-items: center;
+  align-items:center;
   position: relative;
   bottom: 5em;
-  font-size: .8em;
+  color: var(--almost-white);
   background-color: var(--overlay-color);
 }
 
-.header-link-container > .header-github-icon {
-  height: 2em;
-  margin: 0em 0em 0em 1em;
+/* h1 header image text */
+h1, h2 {
+  margin: 0em;
+  color: var(--almost-white);
+  font-size: 1.3em;
+}
+
+.hero-icon {
+  height: 2.7em;
+  margin: .5em;
+}
+
+.hero-image, .divider-image {
+  height: 12em;
+  position: relative;
+  width: 100%;
+  top: 0;
 }
 
 article {
@@ -89,6 +85,8 @@ article {
   display: flex;
   flex-direction: column;
   padding: 1.75em;
+  background-color: var(--page-background-color);
+  z-index: 1;
 }
 
 .link-container {
@@ -98,7 +96,7 @@ article {
 }
 
 .link-container > a {
-  color: var(--social-icons-color);
+  color: var(--primary-color);
   font-size: 1.3em;
 }
 
@@ -109,30 +107,39 @@ article {
 
 .intro {
   color: var(--text-light-color);
-  font-size: 1.4em;
+  font-size: 1.2em;
   text-indent: 1em;
-  margin-bottom: 0em;
+  margin-bottom: 3em;
+  margin: 0em 0em .5em 0em;
+  line-height: 1.4em;
 }
 
 .description {
-  font-size: 1.1em;
   color: var(--lightest-color);
+  font-size: 1em;
+  line-height: 1.4em;
   letter-spacing: .075em;
+  margin: 0em;
+}
+
+.more-icon {
+  height: 3em;
+  margin-bottom: 1.75em;
 }
 
 .details {
-  height: 10em;
+  height: 12em;
+  /* padding-top: 1.75em; */
+  width: 100%;
   overflow: hidden;
 }
 
 .details-header {
   position: relative;
   bottom: 4em;
-  line-height: 2em;
   padding: .1em 0em .3em .7em;
   color: var(--almost-white);
   background-color: var(--overlay-color);
-  opacity: 0;
 }
 
 .details-section {
@@ -228,22 +235,48 @@ object {
 
 /* desktop */
 @media screen and (max-resolution: 96dpi) and (min-width: 600px) {
-  header {
-    height: 20em;
+  h1, h2 {
+    font-size: 3em;
   }
-
-  .header-link-container {
-    font-size: 1.em;
+  header,
+  .hero-image,
+  .divider-image,
+  .details {
+    height: 30em;
   }
-
-  .hero-image {
-    height: 20em;
+  .hero-icon {
+    height: 5em;
+    margin: 1em;
   }
-
+  .hero-link, .details-header {
+    bottom: 12em;
+    /* font-size: 1.5em; */
+  }
+  .resume-section {
+    padding: 7em 7em 1em 7em;
+    width: 80%;
+  }
+  .intro {
+    font-size: 2em;
+  }
+  .description {
+    font-size: 1.6em;
+  }
   .project-descr {
     width: 50%;
   }
-
+  .link-container > a {
+    font-size: 2em;
+  }
+  .resume-download-icon {
+    height: 2em;
+    margin: 0em .5em 0em .5em;
+  }
+  .more-icon {
+    height: 5em;
+  }
+}
+/*
   .project-description-text {
     font-size: 1.6em;
   }
@@ -271,7 +304,7 @@ object {
     height: 35em;
   }
 }
-
+*/
 /* ipad */
 @media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px) {
   header {
