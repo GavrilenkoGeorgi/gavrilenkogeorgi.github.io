@@ -14,8 +14,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest?v=2">
     <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#efd7b1">
-    <title>Comin out</title>
+    <meta name="theme-color" content="#eeeeee">
+    <title>Gavrilenko</title>
   </head>
   <body>
     <script src="./js/index.js"></script>
@@ -79,17 +79,20 @@
           </div>
         </section>
         <!-- Mid page details -->
-        <object
-          class="more-icon"
-          data="icons/baseline-expand_more-24px.svg"
-          type="image/svg+xml"
-          alt="Code icon">
-          <!--img
-            class="png-icon"
-            src="icons/github-icon.png"
-            alt="Github icon" /-->
-        </object>
-        <aside class="details zero-opacity">
+        <a href="#detailsHeader">
+          <object
+            class="more-icon"
+            data="icons/baseline-expand_more-24px.svg"
+            type="image/svg+xml"
+            alt="More icon">
+            <!--img
+              class="png-icon"
+              src="icons/more-icon.png"
+              alt="More icon" /-->
+          </object>
+        </a>
+        <aside id="detailsHeader"
+          class="details zero-opacity">
           <picture>
             <source srcset="../images/bike.webp,
                             ../images/bike@2x.webp 2x,
@@ -102,7 +105,7 @@
                   alt="Close up photo of the bike">
           </picture>
           <a class="hero-link"
-            href="https://github.com/GavrilenkoGeorgi">
+            href="#projects">
             <object
               class="hero-icon"
               data="icons/baseline-code-24px.svg"
@@ -110,19 +113,21 @@
               alt="Code icon">
               <!--img
                 class="png-icon"
-                src="icons/github-icon.png"
-                alt="Github icon" /-->
+                src="icons/code-icon.png"
+                alt="Code icon" /-->
             </object>
             <h2>Some details</h2>
           </a>
         </aside>
         <!-- Section project descriptions -->
-        <section class="details-section">
-          <div class="project-descr">
-            <img src="images/sharlushka.png"
-              class="project-image image-fill"
-              alt="Sharlushka main page screen"
-            />
+        <section id="projects" class="details-section">
+          <div class="project-descr" >
+            <div class="image-container">
+              <img src="images/sharlushka.png"
+                class="project-image image-fill"
+                alt="Sharlushka main page screen"
+              />
+            </div>
             <ul class="project-description-text">
               <li>
                 <a href="https://sharlushka.github.io">
@@ -144,22 +149,24 @@
             </ul>
           </div>
           <div class="project-descr">
-            <img src="images/maxdog.jpg"
-            class="project-image image-fill"
-              alt="maxdog.com.ua main page screen"
-            />
+            <div class="image-container">
+              <img src="images/maxdog.jpg"
+                class="project-image image-fill"
+                alt="maxdog.com.ua main page screen"
+              />
+            </div>
             <ul class="project-description-text">
               <li>
                 <a href="https://maxdog.com.ua">
                   maxdog.com.ua
                 </a>
               </li>
-              <!--li>
+              <li>
                 <a
                   href="https://github.com/GavrilenkoGeorgi/simplesite">
                   github repo
                 </a>
-              </li-->
+              </li>
               <li>Vue.js</li>
               <li>Vuetify</li>
               <li>SCSS</li>
