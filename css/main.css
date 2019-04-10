@@ -58,13 +58,15 @@ header {
   bottom: 5em;
   color: var(--almost-white);
   background-color: var(--overlay-color);
+  overflow: hidden;
 }
 
-/* h1 header image text */
 h1, h2 {
   margin: 0em;
-  color: var(--almost-white);
   font-size: 1.3em;
+  color: var(--almost-white);
+  line-height: 1.4em;
+  padding-bottom: .2em;
 }
 
 .hero-icon {
@@ -88,18 +90,19 @@ article {
 .resume-section {
   display: flex;
   flex-direction: column;
-  padding: 1.75em;
+  padding: 1.5em;
+  padding-bottom: 1.25em;
   background-color: var(--page-background-color);
   z-index: 1;
 }
 
-.link-container {
+.pdf-download-link {
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
 
-.link-container > a {
+.pdf-download-link > a {
   color: var(--primary-color);
   font-size: 1.3em;
 }
@@ -118,17 +121,22 @@ article {
   line-height: 1.4em;
 }
 
-.description {
+.about {
   color: var(--lightest-color);
   font-size: 1em;
   line-height: 1.4em;
   letter-spacing: .075em;
   margin: 0em;
+  text-indent: 1em;
+}
+
+.about:nth-child(2) {
+  margin-bottom: 0.25em;
 }
 
 .more-icon {
   height: 3em;
-  margin-bottom: 1.75em;
+  vertical-align: middle;
 }
 
 .details {
@@ -137,15 +145,6 @@ article {
   overflow: hidden;
 }
 
-/*
-.details-header {
-  position: relative;
-  bottom: 4em;
-  padding: .1em 0em .3em .7em;
-  color: var(--almost-white);
-  background-color: var(--overlay-color);
-}
-*/
 .details-section {
   display: flex;
   flex-direction: row;
@@ -189,8 +188,6 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: .5em 0em .5em .5em;
-  margin-left: .5em;
   max-width: 100%;
   font-size: 1.2em;
   line-height: 1.5em;
@@ -228,7 +225,11 @@ ul {
   height: 2em;
 }
 
-/* something */
+/* helpers */
+object {
+  pointer-events: none;
+}
+
 .image-cover {
   object-fit: cover;
 }
@@ -241,9 +242,10 @@ ul {
   opacity: 0;
 }
 
-object {
-  pointer-events: none;
+.border {
+  border: 1px solid pink;
 }
+
 
 /* desktop */
 @media screen and (max-resolution: 96dpi) and (min-width: 600px) {
@@ -262,7 +264,6 @@ object {
   }
   .hero-link {
     bottom: 12em;
-    /* font-size: 1.5em; */
   }
   .resume-section {
     padding: 7em 15em 1em 15em;
@@ -270,7 +271,7 @@ object {
   .intro {
     font-size: 2em;
   }
-  .description {
+  .about {
     font-size: 1.6em;
   }
   .project-descr {
@@ -279,7 +280,7 @@ object {
   .project-description-text {
     font-size: 1.7em;
   }
-  .link-container > a {
+  .pdf-download-link > a {
     font-size: 2em;
   }
   .resume-download-icon {
@@ -288,6 +289,7 @@ object {
   }
   .more-icon {
     height: 5em;
+    margin: 2em;
   }
   .social-links-container {
     height: 5em;
@@ -299,27 +301,85 @@ object {
   }
 }
 
+/* large desktop 3840×2160 */
+@media screen and (max-resolution: 96dpi) and (min-width: 3840px) {
+  header, .details, .divider-image, .hero-image {
+    height: 70em;
+  }
+  h1, h2 {
+    font-size: 10em;
+    color: #ffa500;
+  }
+  .hero-icon {
+    height: 15em;
+    margin: 4em;
+  }
+  .hero-link {
+    bottom: 30em;
+  }
+  .resume-section {
+    width: 80%;
+    padding: 10em;
+  }
+  .intro {
+    font-size: 6em;
+  }
+  .about {
+    font-size: 5em;
+  }
+  .pdf-download-link > a {
+    font-size: 8em;
+  }
+  .more-icon {
+    height: 15em;
+  }
+  .project-image {
+    height: 50em;
+  }
+  .project-description-text {
+    font-size: 3.5em;
+  }
+  .social-links {
+    padding: 5em;
+  }
+  .svg-icon-social {
+    height: 6em;
+  }
+}
+
+/* small screen iphone5 */
+@media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px) {
+  h1 {
+    font-size: 1.15em;
+  }
+}
+
 /* ipad */
 @media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px) {
-  header {
+  header, .details, .divider-image, .hero-image {
     height: 20em;
   }
   h1, h2 {
     font-size: 2em;
   }
-  
   .header-link-container {
     font-size: 1.6em;
   }
-
-  .hero-image {
-    height: 20em;
+  .hero-link {
+    bottom: 7em;
+  }
+  .hero-icon {
+    height: 3.5em;
+    margin: 1em;
   }
   .intro {
     font-size: 1.8em;
   }
-  .description {
-    font-size: 1.3em;
+  .about {
+    font-size: 1.4em;
+  }
+  .pdf-download-link > a {
+    font-size: 1.4em;
   }
   .project-description-text {
     font-size: 2em;
@@ -329,117 +389,55 @@ object {
     margin: 0em .5em 0em .5em;
   }
   .resume-section {
-    padding: 3em 8em 3em 8em;
+    padding: 3em 8em 2em 8em;
   }
-
-  .details {
-    height: 20em;
-  }
-
-  .divider-image {
-    height: 20em;
+  .more-icon {
+    height: 4em;
+    margin: 1em;
   }
   .project-image {
-    max-height: 30em;
+    max-height: 25em;
   }
 }
 
-/* ipadPro
+/* ipadPro */
 @media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px) {
-  .header-and-logo {
-    height: 15em;
+  header, .details, .divider-image, .hero-image {
+    height: 25em;
   }
-  .header-link {
-    font-size: 3em;
+  .hero-link {
+    bottom: 10em;
   }
-  main {
-    padding-top: 5em;
-    width: 70%;
-    font-size: 1.7em;
+  .hero-icon {
+    height: 5em;
+    margin: 1.3em;
   }
-  .photo-divider {
-    height: 15em;
-    margin: 3em 0em 3em 0em;
+  h1, h2 {
+    font-size: 3.3em;
   }
-  .main-info {
-    display: flex;
+  .intro {
+    font-size: 2.8em;
   }
-  .project-descr {
-    width: 50%;
+  .about {
+    font-size: 2em;
   }
-  .descr-container {
-    font-size: 1.4em;
+  .pdf-download-link > a {
+    font-size: 2em;
   }
-}
-*/
-
-/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
-@-webkit-keyframes pulse {
-  from {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+  .resume-download-icon {
+    height: 2em;
+    margin: 0em .5em 0em .5em;
   }
-
-  50% {
-    -webkit-transform: scale3d(1.1, 1.1, 1.1);
-    transform: scale3d(1.1, 1.1, 1.1);
+  .more-icon {
+    height: 5em;
   }
-
-  to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+  .details-section {
+    padding-top: 3em;
   }
-}
-
-@keyframes pulse {
-  from {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+  .social-links {
+    padding: 2em;
   }
-
-  50% {
-    -webkit-transform: scale3d(1.1, 1.1, 1.1);
-    transform: scale3d(1.1, 1.1, 1.1);
-  }
-
-  to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-}
-
-.pulse {
-  -webkit-animation-name: pulse;
-  animation-name: pulse;
-}
-
-.animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-.animated.infinite {
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-}
-
-.animated.delay-2s {
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
-}
-
-.animated.slow {
-  -webkit-animation-duration: 4s;
-  animation-duration: 4s;
-}
-
-@media (print), (prefers-reduced-motion) {
-  .animated {
-    -webkit-animation: unset !important;
-    animation: unset !important;
-    -webkit-transition: none !important;
-    transition: none !important;
+  .svg-icon-social {
+    height: 3em;
   }
 }

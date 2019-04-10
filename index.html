@@ -8,6 +8,7 @@
     <meta name="keywords" content="HTML,CSS,XML,JavaScript">
     <meta name="author" content="Gavrilenko Georgi">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
     <link rel="icon" href="favicon.ico?v=2">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -18,7 +19,6 @@
     <title>Gavrilenko</title>
   </head>
   <body>
-    <script src="./js/index.js"></script>
     <!-- Hero image -->
     <header>
       <picture>
@@ -26,23 +26,24 @@
                         ../images/smartphone@2x.webp 2x,
                         ../images/smartphone@3x.webp 3x"
                 type="image/webp">
-        <img class="hero-image image-cover" src="../images/smartphone.jpg"
+        <img class="hero-image image-cover lazy" src="../images/smartphone.jpg"
               srcset="../images/smartphone@2x.jpg 2x,
                       ../images/smartphone@3x.jpg 3x"
               alt="Close up photo of the smartphone">
       </picture>
       <!-- Header icon plus h1 -->
       <a class="hero-link header-link-animation"
-        href="https://github.com/GavrilenkoGeorgi">
+        href="https://github.com/GavrilenkoGeorgi"
+        aria-label="View my profile on github.">
         <object
-          class="hero-icon"
+          class="hero-icon animated pulse infinite slow"
           data="icons/github-icon.svg"
           type="image/svg+xml"
-          alt="Github icon">
-          <!--img
+          aria-label="Github icon">
+          <img
             class="png-icon"
             src="icons/github-icon.png"
-            alt="Github icon" /-->
+            alt="Github icon" />
         </object>
         <h1>
           github.com/GavrilenkoGeorgi
@@ -54,43 +55,49 @@
         <!-- Resume section -->
         <section class="resume-section">
           <p class="intro">Hi, my name is Georgi and I am looking for a full-time job as a Middle JS Software Engineer.</p>
-          <p class="description">Most of my experience is with EcmaScript ES6/ES2015, Firestore,
+          <p class="about">Most of my experience is with EcmaScript ES6/ES2015, Firestore,
             Vue.js, Vuex, Vuetify, Webpack, Babel, SCSS/SASS. But I can start as a Junior C# Dev.
             My prior experience includes PHP, MySQL and a basic knowledge of C and Java.<br />
+          </p>
+          <p class="about">
             My English is advanced, I speak Ukrainian and Russian is my native language.
             Currently living in Kyiv, can relocate.
           </p>
-          <div class="link-container">
+          <div class="pdf-download-link">
             <a
               href="pdf/gavrilenkoResume.pdf"
-              download>
+              download
+              aria-label="Download resume in pdf format.">
               My resume in pdf
             </a>
             <a
               href="pdf/gavrilenkoResume.pdf"
-              download>
+              download
+              aria-label="Download resume in pdf format.">
               <object
                 class="resume-download-icon"
                 data="icons/baseline-cloud_download-24px.svg"
-                alt="Resume-icon"
+                aria-label="Resume-icon"
                 type="image/svg+xml">
               </object>
             </a>
           </div>
         </section>
-        <!-- Mid page details -->
-        <a href="#detailsHeader">
+        <!-- More arrow -->
+        <a href="#detailsHeader"
+          aria-label="Scroll down to details header.">
           <object
             class="more-icon"
             data="icons/baseline-expand_more-24px.svg"
             type="image/svg+xml"
-            alt="More icon">
-            <!--img
+            aria-label="More icon">
+            <img
               class="png-icon"
-              src="icons/more-icon.png"
-              alt="More icon" /-->
+              src="icons/baseline-expand_more-24px.png"
+              alt="More icon" />
           </object>
         </a>
+        <!-- Details header -->
         <aside id="detailsHeader"
           class="details zero-opacity">
           <picture>
@@ -98,47 +105,54 @@
                             ../images/bike@2x.webp 2x,
                             ../images/bike@3x.webp 3x"
                     type="image/webp">
-            <img class="divider-image image-cover"
+            <img class="divider-image image-cover lazy"
                   src="../images/bike.jpg"
                   srcset="../images/bike@2x.jpg 2x,
                           ../images/bike@3x.jpg 3x"
                   alt="Close up photo of the bike">
           </picture>
+          <!-- Link over photo -->
           <a class="hero-link"
-            href="#projects">
+            href="#projects"
+            aria-label="Scroll down to details."
+          >
             <object
               class="hero-icon"
               data="icons/baseline-code-24px.svg"
               type="image/svg+xml"
-              alt="Code icon">
-              <!--img
+              aria-label="Code icon">
+              <img
                 class="png-icon"
-                src="icons/code-icon.png"
-                alt="Code icon" /-->
+                src="icons/baseline-code-24px.png"
+                alt="Code icon" />
             </object>
             <h2>Some details</h2>
           </a>
         </aside>
-        <!-- Section project descriptions -->
+        <!-- Project descriptions section -->
         <section id="projects" class="details-section">
+          <!-- Sharlushka -->
           <div class="project-descr" >
             <div class="image-container">
-              <img src="images/sharlushka.png"
-                class="project-image image-fill"
-                alt="Sharlushka main page screen"
-              />
+              <picture>
+                <source srcset="../images/sharlushka.webp,
+                                ../images/sharlushka@2x.webp 2x,
+                                ../images/sharlushka@3x.webp 3x"
+                        type="image/webp">
+                <img class="project-image image-fill lazy"
+                      src="images/sharlushka.png"
+                      srcset="images/sharlushka@2x.png 2x,
+                              images/sharlushka@3x.png 3x"
+                      alt="Sharlushka screens">
+              </picture>
             </div>
             <ul class="project-description-text">
               <li>
-                <a href="https://sharlushka.github.io">
+                <a href="https://sharlushka.github.io"
+                  aria-label="Link to Sharlushka website.">
                   Sharlushka
                 </a>
               </li>
-              <!--li>
-                <a href="https://github.com/GavrilenkoGeorgi/sharlushka">
-                  github repo
-                </a>
-              </li-->
               <li>Vue.js</li>
               <li>Firebase</li>
               <li>Vuetify</li>
@@ -148,23 +162,26 @@
               <li>Babel</li>
             </ul>
           </div>
+          <!-- maxdog.com.ua-->
           <div class="project-descr">
             <div class="image-container">
-              <img src="images/maxdog.jpg"
-                class="project-image image-fill"
-                alt="maxdog.com.ua main page screen"
-              />
+              <picture>
+                <source srcset="../images/maxdog.webp,
+                                ../images/maxdog@2x.webp 2x,
+                                ../images/maxdog@3x.webp 3x"
+                        type="image/webp">
+                <img class="project-image image-fill lazy"
+                      src="images/maxdog.jpg"
+                      srcset="images/maxdog@2x.jpg 2x,
+                              images/maxdog@3x.jpg 3x"
+                      alt="maxdog screens">
+              </picture>
             </div>
             <ul class="project-description-text">
               <li>
-                <a href="https://maxdog.com.ua">
+                <a href="https://maxdog.com.ua"
+                  aria-label="Link to MaxDog website.">
                   maxdog.com.ua
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/GavrilenkoGeorgi/simplesite">
-                  github repo
                 </a>
               </li>
               <li>Vue.js</li>
@@ -176,57 +193,68 @@
         </section>
       </article>
     </main>
+    <!-- Footer -->
     <footer class="social-links">
       <div class="social-links-container">
-        <a class="animated" href="https://facebook.com/gavrilenko.georgi">
+        <a class="animated"
+          href="https://facebook.com/gavrilenko.georgi"
+          aria-label="Link to my facebook profile."
+          >
           <object
             class="svg-icon-social"
-            data="images/facebook-icon.svg"
-            alt="Facebook icon"
+            data="icons/facebook-icon.svg"
+            aria-label="Facebook icon"
             type="image/svg+xml">
             <img
               class="png-icon-social"
-              src="images/facebook-icon.png"
+              src="icons/facebook-icon.png"
               alt="Facebook icon"/>
           </object>
         </a>
-        <a class="animated" href="https://www.flickr.com/people/gavrilenko/">
+        <a class="animated"
+          href="https://www.flickr.com/people/gavrilenko/"
+          aria-label="To my flickr profile.">
           <object
             class="svg-icon-social"
-            data="images/flickr-icon.svg"
+            data="icons/flickr-icon.svg"
             type="image/svg+xml"
-            alt="Flickr icon">
+            aria-label="Flickr icon">
             <img
               class="png-icon-social"
-              src="images/flickr-icon.png"
+              src="icons/flickr-icon.png"
               alt="Flickr icon"/>
           </object>
         </a>
-        <a class="animated" href="https://www.youtube.com/channel/UCaCs9W7wO1zS2aIklojYANQ">
+        <a class="animated"
+          href="https://www.youtube.com/channel/UCaCs9W7wO1zS2aIklojYANQ"
+          aria-label="Youtube channel.">
           <object
             class="svg-icon-social"
-            data="images/youtube-icon.svg"
+            data="icons/youtube-icon.svg"
             type="image/svg+xml"
-            alt="Youtube icon">
+            aria-label="Youtube icon">
             <img
               class="png-icon-social"
-              src="images/youtube-icon.png"
+              src="icons/youtube-icon.png"
               alt="Youtube icon" />
           </object>
         </a>
-        <a class="animated" href="https://www.instagram.com/keypuncherfromouterspace/">
+        <a class="animated"
+          href="https://www.instagram.com/keypuncherfromouterspace/"
+          aria-label="Instagram.">
           <object
             class="svg-icon-social"
-            data="images/instagram-icon.svg"
+            data="icons/instagram-icon.svg"
             type="image/svg+xml"
-            alt="Instagram icon">
+            aria-label="Instagram icon">
             <img
               class="png-icon-social"
-              src="images/instagram-icon.png"
+              src="icons/instagram-icon.png"
               alt="Instagram icon" />
           </object>
         </a>
       </div>
     </footer>
+    <script src="./js/index.js"></script>
   </body>
 </html>
