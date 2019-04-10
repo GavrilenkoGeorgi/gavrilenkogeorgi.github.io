@@ -1,46 +1,56 @@
 console.log(`Hi!`)
 
-window.addEventListener(`scroll`, () => {
-  let scrolled = window.pageYOffset
-  const heroImage = document.querySelector(`.hero-image`)
-  heroImage.style.top = scrolled * .03 + `em`
-  heroImage.style.opacity = 1 - scrolled * 0.0075
-  const heroHeaderLink = document.querySelector(`.header-link-animation`)
-  heroHeaderLink.style.opacity = 1 - scrolled * 0.0075
+document.addEventListener(`DOMContentLoaded`, () => {
+  let lazyImages = [].slice.call(document.querySelectorAll(`img.lazy`))
+  let active = false
 
-  const detailsHeader = document.querySelector(`.details`)
-  detailsHeader.style.opacity = scrolled * 0.004
-  /*
-  const heroHeaderLink = document.querySelector(`.header-link-animation`)
-  let currentBottom = heroHeaderLink.style.bottom
-  console.log(`Pre current bottom is ${currentBottom}`)
-  let value = currentBottom.substr(0, currentBottom.length-2)
+  const lazyLoad = () => {
+    if (active === false) {
+      active = true
 
-  console.log(`Current bottom is ${value}`)
-  let result = Math.abs(value - scrolled * .04).toFixed(2)
-  console.log(`Result is ${result}`)
-  /* console.log(`Current bottom is ${currentBottom}`) */
-  /* let valueToSet = parseFloat(result).toFixed(2) */
-  /* heroHeaderLink.style.bottom = value + result + `em` */
-  /*
-  heroHeaderLink.style.top = scrolled * .04 + `em`
-  console.log(`Trying to set ${result + `em`}`)
+      setTimeout(() => {
+        lazyImages.forEach(lazyImage => {
+          if (lazyImage.getBoundingClientRect().top
+            <= window.innerHeight
+            && lazyImage.getBoundingClientRect().bottom
+            >= 0
+            && getComputedStyle(lazyImage).display !== `none`) {
+            lazyImage.src = lazyImage.dataset.src
+            lazyImage.srcset = lazyImage.dataset.srcset
+            lazyImage.classList.remove(`lazy`)
+            lazyImages = lazyImages.filter(image => {
+              return image !== lazyImage
+            })
 
-  heroHeaderLink.style.opacity = 1 - scrolled * 0.0075
-  */
-  /*
-  const dividerImage = document.querySelector(`.divider-image`)
-  const heroHeaderLink = document.querySelector(`.header-link-container`)
-  const detailsHeader = document.querySelector(`.details-header`)
-  // hero image
-  heroImage.style.top = scrolled * .04 + `em`
-  heroImage.style.opacity = 1 - scrolled * 0.0075
-  // header text
-  heroHeaderLink.style.bottom = 5 - scrolled * .02 + `em`
-  heroHeaderLink.style.opacity = 1 - scrolled * 0.0075
-  // details image
-  dividerImage.style.opacity = scrolled * 0.005
-  // details text
-  detailsHeader.style.opacity = scrolled * 0.005
-  */
+            if (lazyImages.length === 0) {
+              document.removeEventListener(`scroll`, lazyLoad)
+              window.removeEventListener(`resize`, lazyLoad)
+              window.removeEventListener(`orientationchange`, lazyLoad)
+            }
+          }
+        })
+
+        active = false
+      }, 200)
+    }
+  }
+
+  document.addEventListener(`scroll`, lazyLoad)
+  window.addEventListener(`resize`, lazyLoad)
+  window.addEventListener(`orientationchange`, lazyLoad)
+
+  // animate
+  const animateElements = () => {
+    let scrolled = window.pageYOffset
+    const heroImage = document.querySelector(`.hero-image`)
+    heroImage.style.top = scrolled * .03 + `em`
+    heroImage.style.opacity = 1 - scrolled * 0.0075
+    const heroHeaderLink = document.querySelector(`.header-link-animation`)
+    heroHeaderLink.style.opacity = 1 - scrolled * 0.0075
+
+    const detailsHeader = document.querySelector(`.details`)
+    detailsHeader.style.opacity = scrolled * 0.004
+  }
+
+  document.addEventListener(`scroll`, animateElements)
 })
