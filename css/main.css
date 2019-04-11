@@ -1,30 +1,22 @@
-/* lato-regular - latin */
 @font-face {
-  font-family: 'Lato';
-  font-style: normal;
+  font-family: 'IBM Plex Sans Variable';
   font-display: swap;
-  font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'),
-       url('../fonts/lato-v15-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/lato-v15-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  font-weight: 400 600;
+  font-stretch: 40% 100%;
+  src: local('IBM Plex Sans Variable'), local('IBM-Plex-Sans-Variable'),
+       url('../fonts/IBMPlexSansVar-Roman.woff2') format('woff2-variations')
 }
+
 :root {
-  --primary-color: #3342c0;
-  --social-icons-color: #3342c0;
-  --pale-primary-color: #8995ff;
-  --highlight-color: #ffa500;
-  --text-light-color: #444444;
-  --header-color: #727272;
-  --default-font: 'Lato', 'Verdana', sans-serif;
-  --page-background-color: rgb(255, 255, 255);
-  --lightest-color: rgb(95, 95, 95);
-  --some-color: #a8a8a8;
-  --almost-white: #eeeeee;
-  --dark: rgb(83, 83, 83);
-  --darker: black;
+  --default-font: 'IBM Plex Sans Variable', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --primary-color: #32936f;
+  --social-icons-color: #f4d35e;
+  --pale-primary-color: #c0d3b479;
+  --text-light-color: rgba(34, 34, 34, 1);
+  --page-background-color: white;
+  --lightest-color: rgba(95, 95, 95, 1);
+  --almost-white: #ffffff;
   --overlay-color: rgba(0, 0, 0, 0.466);
-  --theme-color: #eeeeee;
-  --theme-color-darker: #b19363;
 }
 
 *, *::before, *::after {
@@ -40,14 +32,21 @@ body {
   padding: 0px;
   margin: 0px;
   width: 100%;
-  font-family: var(--default-font);
   font-size: 16px;
+  font-weight: 400;
   direction: ltr;
+  font-optical-sizing: auto;
 }
 
-/* header on mobile is this tall */
-header {
-  height: 12em;
+@supports (font-variation-settings: 'wdth' 115) {
+  body {
+     font-family: var(--default-font);
+  }
+ }
+
+ /* header on mobile is this tall */
+header, .details, .hero-image, .divider-image {
+  height: 10em;
 }
 
 /* header image link text */
@@ -59,14 +58,14 @@ header {
   color: var(--almost-white);
   background-color: var(--overlay-color);
   overflow: hidden;
+  font-size: 1.15em;
 }
 
 h1, h2 {
   margin: 0em;
-  font-size: 1.3em;
   color: var(--almost-white);
-  line-height: 1.4em;
-  padding-bottom: .2em;
+  font-weight: 500;
+  /* font-variation-settings: 'wdth' 100; */
 }
 
 .hero-icon {
@@ -75,7 +74,6 @@ h1, h2 {
 }
 
 .hero-image, .divider-image {
-  height: 12em;
   position: relative;
   width: 100%;
   top: 0;
@@ -105,6 +103,7 @@ article {
 .pdf-download-link > a {
   color: var(--primary-color);
   font-size: 1.3em;
+  font-weight: 500;
 }
 
 .resume-download-icon {
@@ -112,22 +111,24 @@ article {
   margin: 0em .5em 0em .5em;
 }
 
+.intro, .about {
+  line-height: 1.2em;
+  text-indent: 1em;
+}
+
 .intro {
   color: var(--text-light-color);
-  font-size: 1.2em;
-  text-indent: 1em;
+  font-size: 1.5em;
+  font-weight: 500;
+  font-stretch: 40%;
   margin-bottom: 3em;
   margin: 0em 0em .5em 0em;
-  line-height: 1.4em;
 }
 
 .about {
   color: var(--lightest-color);
-  font-size: 1em;
-  line-height: 1.4em;
-  letter-spacing: .075em;
+  font-size: 1.2em;
   margin: 0em;
-  text-indent: 1em;
 }
 
 .about:nth-child(2) {
@@ -140,7 +141,6 @@ article {
 }
 
 .details {
-  height: 12em;
   width: 100%;
   overflow: hidden;
 }
@@ -191,18 +191,23 @@ ul {
   max-width: 100%;
   font-size: 1.2em;
   line-height: 1.5em;
-  color: var(--dark);
 }
 
 .project-description-text > li > a {
-  color: var(--social-icons-color);
+  font-weight: 600;
+  color: var(--primary-color);
+  font-variation-settings: 'GRAD' 100;
+}
+
+li:first-child {
+  margin-bottom: 1em;
 }
 
 .social-links {
   display: flex;
   justify-content: space-around;
   padding: 1em .5em 1em .5em;
-  background-color: var(--theme-color);
+  background-color: var(--pale-primary-color);
   width: 100%;
 }
 
@@ -215,10 +220,27 @@ ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  align-content: center;
 }
 
+.social-links-container > a {
+  display: flex;
+}
+
+.social-links-container:hover {
+  border: 1px solid green;
+}
 .svg-icon-social {
   height: 2em;
+}
+
+.animated-icon {
+  animation: pulse 10s linear infinite;
+  animation-play-state: paused;
+}
+.animated-icon:hover {
+  animation-play-state: running;
+  /* border: 1px solid red; */
 }
 
 .png-icon-social {
