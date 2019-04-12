@@ -8,7 +8,7 @@
 }
 
 :root {
-  --default-font: 'IBM Plex Sans Variable', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --default-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   --primary-color: #32936f;
   --social-icons-color: #f4d35e;
   --pale-primary-color: #c0d3b479;
@@ -40,7 +40,7 @@ body {
 
 @supports (font-variation-settings: 'wdth' 115) {
   body {
-     font-family: var(--default-font);
+     font-family: 'IBM Plex Sans Variable';
   }
  }
 
@@ -58,7 +58,7 @@ header, .details, .hero-image, .divider-image {
   color: var(--almost-white);
   background-color: var(--overlay-color);
   overflow: hidden;
-  font-size: 1.15em;
+  font-size: 1.125em;
 }
 
 h1, h2 {
@@ -70,7 +70,7 @@ h1, h2 {
 
 .hero-icon {
   height: 2.7em;
-  margin: .5em;
+  margin: .75em;
 }
 
 .hero-image, .divider-image {
@@ -227,20 +227,8 @@ li:first-child {
   display: flex;
 }
 
-.social-links-container:hover {
-  border: 1px solid green;
-}
 .svg-icon-social {
-  height: 2em;
-}
-
-.animated-icon {
-  animation: pulse 10s linear infinite;
-  animation-play-state: paused;
-}
-.animated-icon:hover {
-  animation-play-state: running;
-  /* border: 1px solid red; */
+  height: 1.2em;
 }
 
 .png-icon-social {
@@ -248,8 +236,8 @@ li:first-child {
 }
 
 /* helpers */
-object {
-  pointer-events: none;
+.svg-icon-social {
+  z-index: -1;
 }
 
 .image-cover {

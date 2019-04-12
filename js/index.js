@@ -53,4 +53,39 @@ document.addEventListener(`DOMContentLoaded`, () => {
   }
 
   document.addEventListener(`scroll`, animateElements)
+
+  // svg icon color changer
+  function getRandomColor() {
+    var letters = `0123456789ABCDEF`
+    var color = `#`
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)]
+    }
+    return color
+  }
+
+  // change svg icon color
+  let headerIcon = document.getElementById(`headerIcon`)
+  // so that hovering over the link changes color too
+  let headerWithIcon = document.querySelector(`.hero-link`)
+
+  const setIconFillColor = (svgIcon) => {
+    let icon = svgIcon.contentDocument
+    let color = getRandomColor()
+    // suppose our image contains a <path>
+    let path = icon.querySelector(`path`)
+    path.setAttribute(`fill`, `${color}`)
+  }
+  // on element load we set icon random color
+  headerIcon.addEventListener(`load`, () => {
+    setIconFillColor(headerIcon)
+  })
+  // then on mouse over the link on desktop
+  headerWithIcon.addEventListener(`mouseover`, () => {
+    setIconFillColor(headerIcon)
+  })
+  // and on touch on mobile
+  document.addEventListener(`touchstart`, () => {
+    setIconFillColor(headerIcon)
+  })
 })
