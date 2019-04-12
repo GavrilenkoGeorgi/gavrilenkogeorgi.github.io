@@ -36,6 +36,7 @@ body {
   font-weight: 400;
   direction: ltr;
   font-optical-sizing: auto;
+  z-index: 1;
 }
 
 @supports (font-variation-settings: 'wdth' 115) {
@@ -137,9 +138,11 @@ article {
 
 .more-icon {
   height: 3em;
-  vertical-align: middle;
 }
 
+object {
+  pointer-events: none;
+}
 .details {
   width: 100%;
   overflow: hidden;
