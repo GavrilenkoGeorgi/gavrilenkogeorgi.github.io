@@ -43,8 +43,11 @@ document.addEventListener(`DOMContentLoaded`, () => {
   const animateElements = () => {
     let scrolled = window.pageYOffset
     const heroImage = document.querySelector(`.hero-image`)
-    heroImage.style.top = scrolled * .03 + `em`
+    heroImage.style.top = scrolled * .02 + `em`
     heroImage.style.opacity = 1 - scrolled * 0.0075
+    // moar stuff
+    heroImage.style.filter = `grayscale(${scrolled * 0.8 + `%`})`
+
     const heroHeaderLink = document.querySelector(`.header-link-animation`)
     heroHeaderLink.style.opacity = 1 - scrolled * 0.0075
 
@@ -52,13 +55,27 @@ document.addEventListener(`DOMContentLoaded`, () => {
     detailsHeader.style.opacity = scrolled * 0.004
   }
 
-  document.addEventListener(`scroll`, animateElements)
+  // debounce
+  const debounce = (func, delay) => {
+    let inDebounce
+    return function() {
+      const context = this
+      const args = arguments
+      clearTimeout(inDebounce)
+      inDebounce = setTimeout(() => func.apply(context, args), delay)
+    }
+  }
+
+  // on scroll
+  document.addEventListener(`scroll`, debounce(() => {
+    animateElements()
+  }, 16))
 
   // svg icon color changer
-  function getRandomColor() {
-    var letters = `0123456789ABCDEF`
-    var color = `#`
-    for (var i = 0; i < 6; i++) {
+  const getRandomColor = () => {
+    let letters = `0123456789ABCDEF`
+    let color = `#`
+    for (let i = 0; i < 6; i++) {
       color += letters[Math.floor(Math.random() * 16)]
     }
     return color
@@ -66,7 +83,8 @@ document.addEventListener(`DOMContentLoaded`, () => {
 
   // change svg icon color
   let headerIcon = document.getElementById(`headerIcon`)
-  // so that hovering over the link changes color too
+  // so that hovering over the link
+  // on desktop changes color too
   let headerWithIcon = document.querySelector(`.hero-link`)
 
   const setIconFillColor = (svgIcon) => {
@@ -76,11 +94,11 @@ document.addEventListener(`DOMContentLoaded`, () => {
     let path = icon.querySelector(`path`)
     path.setAttribute(`fill`, `${color}`)
   }
-  // on element load we set icon random color
+  // on element load we set random icon color
   headerIcon.addEventListener(`load`, () => {
     setIconFillColor(headerIcon)
   })
-  // then on mouse over the link on desktop
+  // then on mouse over the whole link on desktop screen
   headerWithIcon.addEventListener(`mouseover`, () => {
     setIconFillColor(headerIcon)
   })
