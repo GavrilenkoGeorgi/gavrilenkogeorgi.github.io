@@ -7,7 +7,7 @@
   font-display: swap
   src: local('IBM Plex Sans Variable'), local('IBM-Plex-Sans-Variable')
   src: url('../fonts/IBMPlexSansVar-Roman.woff2') format('woff2-variations')
-  font-weight: 400 600
+  font-weight: 400 700
   font-stretch: 40% 100%
 
 *, *::before, *::after
@@ -68,6 +68,7 @@ header, .details, .hero-image, .divider-image
     bottom: 5em
   +desktop(96dpi, 1920px)
     bottom: 15em
+
 h1, h2
   margin: 0em
   color: $almost-white
@@ -190,6 +191,10 @@ article
     +desktop(96dpi, 1920px)
       font-size: 4em
 
+.resume-download-icon-container:hover
+  .resume-download-icon
+    animation-name: pulse
+
 .resume-download-icon
   height: 2em
   margin: 0em .5em 0em .5em
@@ -197,6 +202,9 @@ article
 .more-arrow
   display: flex
   padding-bottom: 1em
+
+.more-arrow:hover
+    animation-name: pulse
 
 .more-icon
   height: 3em
@@ -219,9 +227,11 @@ object
   flex-direction: row
   flex-wrap: wrap
   width: 100%
-  padding: 1em
+  // padding: 1em
   +handheld(2, 768px)
     padding: 2em
+  +handheld(2, 1024px)
+    padding: 2em 0em 2em 0em
 
 .project-image
   height: auto
@@ -230,6 +240,13 @@ object
   -moz-box-shadow: 1px 1px 5px 1px rgba(173,173,173,1)
   box-shadow: 1px 1px 5px 1px rgba(173,173,173,1)
   +handheld(2, 1024px)
+
+.project-icon
+  height: 2em
+
+.project-icon-container
+  object:hover
+    animation-name: pulse
 
 .project-descr
   display: flex
@@ -258,7 +275,6 @@ ul
   padding: 0em
   margin: 0em
 
-
 .project-description-text
   flex-grow: 1
   flex-basis: 0
@@ -269,23 +285,36 @@ ul
   max-width: 100%
   font-size: 1.2em
   line-height: 1.5em
+
+  li:first-child
+    display: flex
+  li:first-child:hover
+    animation-name: pulse
+  li:nth-child(2)
+    margin-bottom: .5em
+    font-size: 1.1em
+    font-weight: 700
+
   +handheld(2, 768px)
     font-size: 1.8em
     font-weight: 600
+  +handheld(2, 1024px)
+    justify-content: flex-start
   +desktop(96dpi, 600px)
     font-size: 1.5em
     font-weight: 600
   +desktop(96dpi, 1920px)
     font-size: 2em
 
-li:first-child
-  margin-bottom: .5em
-  color: $primary-color
+.project-description-text:hover
+  li:first-child
+    animation-name: pulse
 
-li:first-child
-  a
-    color: $primary-color
-    font-weight: 600
+.sharlushka-link
+  color: $sharlushka-color
+
+.maxdog-link
+  color: $maxdog-color
 
 .social-links
   display: flex

@@ -1,4 +1,25 @@
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+@-webkit-keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
+}
+@keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
+}
+.flash {
+  -webkit-animation-name: flash;
+  animation-name: flash;
+}
+
 @-webkit-keyframes pulse {
   from {
     -webkit-transform: scale3d(1, 1, 1);
@@ -50,6 +71,11 @@
 }
 
 .animated.slow {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+.animated.slower {
   -webkit-animation-duration: 5s;
   animation-duration: 5s;
 }
@@ -67,7 +93,7 @@
   font-display: swap;
   src: local("IBM Plex Sans Variable"), local("IBM-Plex-Sans-Variable");
   src: url("../fonts/IBMPlexSansVar-Roman.woff2") format("woff2-variations");
-  font-weight: 400 600;
+  font-weight: 400 700;
   font-stretch: 40% 100%;
 }
 *, *::before, *::after {
@@ -367,6 +393,10 @@ article {
   }
 }
 
+.resume-download-icon-container:hover .resume-download-icon {
+  animation-name: pulse;
+}
+
 .resume-download-icon {
   height: 2em;
   margin: 0em 0.5em 0em 0.5em;
@@ -375,6 +405,10 @@ article {
 .more-arrow {
   display: flex;
   padding-bottom: 1em;
+}
+
+.more-arrow:hover {
+  animation-name: pulse;
 }
 
 .more-icon {
@@ -410,11 +444,15 @@ object {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  padding: 1em;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px) {
   .details-section {
     padding: 2em;
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px) {
+  .details-section {
+    padding: 2em 0em 2em 0em;
   }
 }
 
@@ -425,6 +463,14 @@ object {
   -moz-box-shadow: 1px 1px 5px 1px #adadad;
   box-shadow: 1px 1px 5px 1px #adadad;
 }
+.project-icon {
+  height: 2em;
+}
+
+.project-icon-container object:hover {
+  animation-name: pulse;
+}
+
 .project-descr {
   display: flex;
   flex: 100%;
@@ -472,10 +518,26 @@ ul {
   font-size: 1.2em;
   line-height: 1.5em;
 }
+.project-description-text li:first-child {
+  display: flex;
+}
+.project-description-text li:first-child:hover {
+  animation-name: pulse;
+}
+.project-description-text li:nth-child(2) {
+  margin-bottom: 0.5em;
+  font-size: 1.1em;
+  font-weight: 700;
+}
 @media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px) {
   .project-description-text {
     font-size: 1.8em;
     font-weight: 600;
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px) {
+  .project-description-text {
+    justify-content: flex-start;
   }
 }
 @media screen and (max-resolution: 96dpi) and (min-width: 600px) {
@@ -490,14 +552,16 @@ ul {
   }
 }
 
-li:first-child {
-  margin-bottom: 0.5em;
-  color: #32936f;
+.project-description-text:hover li:first-child {
+  animation-name: pulse;
 }
 
-li:first-child a {
-  color: #32936f;
-  font-weight: 600;
+.sharlushka-link {
+  color: #7B1FA2;
+}
+
+.maxdog-link {
+  color: #002c53;
 }
 
 .social-links {

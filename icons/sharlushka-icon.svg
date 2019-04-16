@@ -2,44 +2,44 @@
   viewBox="0 0 200 200"
 >
   <circle
-    fill="currentColor"
+    fill="#7B1FA2"
     cx="150"
     cy="100"
     r="18"
   />
   <circle
-    fill="black"
+    fill="#7B1FA2"
     cx="150"
     cy="50"
     r="18"
   />
   <circle
-    fill="black"
+    fill="#7B1FA2"
     cx="150"
     cy="150"
     r="18"
   />
   <circle
-    fill="black"
+    fill="#7B1FA2"
     cx="50"
     cy="150"
     r="18"
   />
   <circle
-    fill="black"
+    fill="#7B1FA2"
     cx="50"
     cy="100"
     r="18"
   />
   <circle
-    fill="black"
+    fill="#7B1FA2"
     cx="50"
     cy="50"
     r="18"
   />
   <path
     stroke-width=".4em"
-    stroke="black"
+    stroke="#7B1FA2"
     fill="none"
     d="M20,5H180a15,15,0,0,1,15,15V180a15,15,0,0,1-15,15H20A15,15,0,0,1,5,180V20A15,15,0,0,1,20,5Z"
   />
