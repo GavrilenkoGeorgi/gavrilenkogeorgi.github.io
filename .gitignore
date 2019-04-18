@@ -1,6 +1,3 @@
 .DS_Store
-images/largest-smartphone.jpg
-images/largest-bike.jpg
-images/background.jpg
 node_modules
-css/palette.css
+fonts/AvenirNext_Variable.ttf
