@@ -54,7 +54,7 @@ document.addEventListener(`DOMContentLoaded`, () => {
     const detailsHeader = document.querySelector(`.details`)
     detailsHeader.style.opacity = scrolled * 0.004
   }
-
+  /*
   // debounce
   const debounce = (func, delay) => {
     let inDebounce
@@ -70,6 +70,21 @@ document.addEventListener(`DOMContentLoaded`, () => {
   document.addEventListener(`scroll`, debounce(() => {
     animateElements()
   }, 16))
+  */
+
+  // throttle
+  const throttle = (fn, wait) => {
+    var time = Date.now()
+    return () => {
+      if (time + wait - Date.now() < 0) {
+        fn()
+        time = Date.now()
+      }
+    }
+  }
+
+  // throttle on scroll
+  document.addEventListener(`scroll`, throttle(animateElements, 16))
 
   // svg icon color changer
   const getRandomColor = () => {
