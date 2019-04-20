@@ -120,6 +120,12 @@ body {
     font-feature-settings: "salt", "ss02";
   }
 }
+.project-description-text, .image-container, .resume-section, article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* header on mobile is this tall */
 header, .details, .hero-image, .divider-image {
   height: 10em;
@@ -172,7 +178,7 @@ header, .details, .hero-image, .divider-image {
 }
 @media screen and (max-resolution: 96dpi) and (min-width: 600px) {
   .hero-link {
-    bottom: 5em;
+    bottom: 7em;
   }
 }
 @media screen and (max-resolution: 96dpi) and (min-width: 1920px) {
@@ -200,18 +206,18 @@ h1, h2 {
 }
 @media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px) {
   h1, h2 {
-    font-size: 2em;
+    font-size: 2.3em;
     font-weight: 600;
   }
 }
 @media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px) {
   h1, h2 {
-    font-size: 3em;
+    font-size: 3.3em;
   }
 }
 @media screen and (max-resolution: 96dpi) and (min-width: 600px) {
   h1, h2 {
-    font-size: 2em;
+    font-size: 3em;
   }
 }
 @media screen and (max-resolution: 96dpi) and (min-width: 1920px) {
@@ -227,16 +233,25 @@ h1, h2 {
 @media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px) {
   .hero-icon {
     height: 3em;
+    margin: 0.75em;
   }
 }
 @media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px) {
   .hero-icon {
     height: 3.5em;
+    margin: 1em;
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1440px) {
+  .hero-icon {
+    height: 4.5em;
+    margin: 1em;
   }
 }
 @media screen and (max-resolution: 96dpi) and (min-width: 600px) {
   .hero-icon {
-    height: 2.5em;
+    height: 3.5em;
+    margin: 1em;
   }
 }
 @media screen and (max-resolution: 96dpi) and (min-width: 1920px) {
@@ -252,24 +267,20 @@ h1, h2 {
   top: 0;
 }
 
-article {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .resume-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 1.5em;
   padding-bottom: 0em;
   background-color: white;
   z-index: 1;
 }
-@media screen and (max-resolution: 96dpi) and (min-width: 1920px) {
+@media screen and (max-resolution: 96dpi) and (min-width: 600px) {
   .resume-section {
     padding-top: 3em;
+  }
+}
+@media screen and (max-resolution: 96dpi) and (min-width: 1920px) {
+  .resume-section {
+    padding-top: 4em;
   }
 }
 @media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px) {
@@ -279,17 +290,17 @@ article {
 }
 @media screen and (max-resolution: 96dpi) and (min-width: 600px) {
   .resume-section p {
-    width: 90%;
+    width: 80%;
   }
 }
 @media screen and (max-resolution: 96dpi) and (min-width: 1440px) {
   .resume-section p {
-    width: 80%;
+    width: 70%;
   }
 }
 @media screen and (max-resolution: 96dpi) and (min-width: 1920px) {
   .resume-section p {
-    width: 70%;
+    width: 60%;
   }
 }
 
@@ -302,7 +313,6 @@ article {
   color: #222222;
   font-size: 1.35em;
   font-variation-settings: "wght" 500, "wdth" 85;
-  margin-bottom: 3em;
   margin: 0em 0em 0.5em 0em;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px) {
@@ -427,10 +437,6 @@ article {
   }
 }
 
-object {
-  pointer-events: none;
-}
-
 .details {
   width: 100%;
   overflow: hidden;
@@ -491,9 +497,6 @@ object {
 .image-container {
   width: 50%;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 ul {
@@ -506,10 +509,7 @@ ul {
 .project-description-text {
   flex-grow: 1;
   flex-basis: 0;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
   max-width: 100%;
   font-size: 1.2em;
   line-height: 1.5em;
@@ -554,6 +554,7 @@ ul {
 
 .sharlushka-link, .maxdog-link {
   font-variation-settings: "wght" 200;
+  line-height: 2;
 }
 
 .sharlushka-link {
@@ -627,6 +628,10 @@ ul {
 }
 
 /* helpers */
+object {
+  pointer-events: none;
+}
+
 .svg-icon-social {
   z-index: -1;
 }
