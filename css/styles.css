@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "IBM Plex Sans Variable";
+  font-display: swap;
+  src: local("IBM Plex Sans Variable"), local("IBM-Plex-Sans-Variable");
+  src: url("../fonts/IBMPlexSansVar-Roman.woff2") format("woff2-variations");
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@supports (font-variation-settings: "wdth" 100) {
+  body {
+    font-family: "IBM Plex Sans Variable";
+    font-feature-settings: "salt", "ss02";
+  }
+}
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 @-webkit-keyframes flash {
   from, 50%, to {
@@ -88,12 +104,6 @@
     transition: none !important;
   }
 }
-@font-face {
-  font-family: "IBM Plex Sans Variable";
-  font-display: swap;
-  src: local("IBM Plex Sans Variable"), local("IBM-Plex-Sans-Variable");
-  src: url("../fonts/IBMPlexSansVar-Roman.woff2") format("woff2-variations");
-}
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -107,19 +117,12 @@ body {
   padding: 0px;
   margin: 0px;
   width: 100%;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 16px;
   font-weight: 400;
   direction: ltr;
   z-index: 1;
 }
 
-@supports (font-variation-settings: "wdth" 100) {
-  body {
-    font-family: "IBM Plex Sans Variable";
-    font-feature-settings: "salt", "ss02";
-  }
-}
 .project-description-text, .image-container, .resume-section, article {
   display: flex;
   flex-direction: column;

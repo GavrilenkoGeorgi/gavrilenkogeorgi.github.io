@@ -1,12 +1,7 @@
+@import 'fonts.sass'
 @import 'vars.sass'
 @import 'animations.sass'
 @import 'mixins.sass'
-
-@font-face
-  font-family: 'IBM Plex Sans Variable'
-  font-display: swap
-  src: local('IBM Plex Sans Variable'), local('IBM-Plex-Sans-Variable')
-  src: url('../fonts/IBMPlexSansVar-Roman.woff2') format('woff2-variations')
 
 *, *::before, *::after
   box-sizing: border-box
@@ -19,16 +14,10 @@ body
   padding: 0px
   margin: 0px
   width: 100%
-  font-family: $default-font
   font-size: 16px
   font-weight: 400
   direction: ltr
   z-index: 1
-
-@supports (font-variation-settings: 'wdth' 100)
-  body
-    font-family: 'IBM Plex Sans Variable'
-    font-feature-settings: 'salt', 'ss02'
 
 // centered column layout
 %flex-col-center
