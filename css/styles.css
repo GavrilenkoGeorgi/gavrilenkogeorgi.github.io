@@ -129,6 +129,10 @@ body {
   align-items: center;
 }
 
+a {
+  color: #32936f;
+}
+
 /* header on mobile is this tall */
 header, .details, .hero-image, .divider-image {
   height: 10em;
@@ -469,14 +473,6 @@ h1, h2 {
   -moz-box-shadow: 1px 1px 5px 1px #adadad;
   box-shadow: 1px 1px 5px 1px #adadad;
 }
-.project-icon {
-  height: 2em;
-}
-
-.project-icon-container object:hover {
-  animation-name: pulse;
-}
-
 .project-descr {
   display: flex;
   flex: 100%;
@@ -518,15 +514,12 @@ ul {
   line-height: 1.5em;
 }
 .project-description-text li:first-child {
-  display: flex;
-}
-.project-description-text li:first-child:hover {
-  animation-name: pulse;
-}
-.project-description-text li:nth-child(2) {
   margin-bottom: 0.5em;
   font-size: 1.1em;
   font-weight: 700;
+}
+.project-description-text li:first-child:hover {
+  animation-name: pulse;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px) {
   .project-description-text {
@@ -558,14 +551,6 @@ ul {
 .sharlushka-link, .maxdog-link {
   font-variation-settings: "wght" 200;
   line-height: 2;
-}
-
-.sharlushka-link {
-  color: #7B1FA2;
-}
-
-.maxdog-link {
-  color: #002c53;
 }
 
 .social-links {
@@ -649,6 +634,10 @@ object {
 
 .zero-opacity {
   opacity: 0;
+}
+
+.bold-font {
+  font-variation-settings: "wght" 525;
 }
 
 /*# sourceMappingURL=styles.css.map */

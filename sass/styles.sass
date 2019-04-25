@@ -25,6 +25,9 @@ body
   flex-direction: column
   align-items: center
 
+a
+  color: $primary-color
+
 /* header on mobile is this tall */
 header, .details, .hero-image, .divider-image
   height: 10em
@@ -231,13 +234,6 @@ article
   box-shadow: 1px 1px 5px 1px rgba(173,173,173,1)
   +handheld(2, 1024px)
 
-.project-icon
-  height: 2em
-
-.project-icon-container
-  object:hover
-    animation-name: pulse
-
 .project-descr
   display: flex
   flex: 100%
@@ -271,13 +267,13 @@ ul
   line-height: 1.5em
 
   li:first-child
-    display: flex
-  li:first-child:hover
-    animation-name: pulse
-  li:nth-child(2)
+    // display: flex
     margin-bottom: .5em
     font-size: 1.1em
     font-weight: 700
+  li:first-child:hover
+    animation-name: pulse
+  // li:nth-child(2)
 
   +handheld(2, 768px)
     font-size: 1.8em
@@ -297,12 +293,6 @@ ul
 .sharlushka-link, .maxdog-link
   font-variation-settings: "wght" 200
   line-height: 2
-
-.sharlushka-link
-  color: $sharlushka-color
-
-.maxdog-link
-  color: $maxdog-color
 
 .social-links
   display: flex
@@ -359,3 +349,6 @@ object
 
 .zero-opacity
   opacity: 0
+
+.bold-font
+  font-variation-settings: "wght" 525

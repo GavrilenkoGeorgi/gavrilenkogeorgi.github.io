@@ -46,7 +46,7 @@ import { projects } from "../json/projectData.js"
       })
       // title and text
       shadowRoot.querySelector(`.page-title`).innerText = `${project.name}`
-      shadowRoot.querySelector(`.text-descr`).innerText = `${project.descr}`
+      // shadowRoot.querySelector(`.text-descr`).innerText = `${project.descr}`
 
       // create external links list
       let unorderedList = shadowRoot.querySelector(`.external-links`)

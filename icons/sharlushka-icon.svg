@@ -3,44 +3,44 @@
   preserveAspectRatio="xMinYMin meet"
 >
   <circle
-    fill="#7B1FA2"
+    fill="#32936f"
     cx="150"
     cy="100"
     r="18"
   />
   <circle
-    fill="#7B1FA2"
+    fill="#32936f"
     cx="150"
     cy="50"
     r="18"
   />
   <circle
-    fill="#7B1FA2"
+    fill="#32936f"
     cx="150"
     cy="150"
     r="18"
   />
   <circle
-    fill="#7B1FA2"
+    fill="#32936f"
     cx="50"
     cy="150"
     r="18"
   />
   <circle
-    fill="#7B1FA2"
+    fill="#32936f"
     cx="50"
     cy="100"
     r="18"
   />
   <circle
-    fill="#7B1FA2"
+    fill="#32936f"
     cx="50"
     cy="50"
     r="18"
   />
   <path
-    stroke-width=".4em"
-    stroke="#7B1FA2"
+    stroke-width=".5em"
+    stroke="#32936f"
     fill="none"
     d="M20,5H180a15,15,0,0,1,15,15V180a15,15,0,0,1-15,15H20A15,15,0,0,1,5,180V20A15,15,0,0,1,20,5Z"
   />
