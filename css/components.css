@@ -1,6 +1,5 @@
 .icon-container {
   text-align: right;
-  z-index: 1;
 }
 .icon-container a {
   border: 1px solid pink;
@@ -15,7 +14,11 @@
 .close-icon {
   height: 3em;
   padding: 1em;
-  z-index: -1;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px) {
+  .close-icon {
+    height: 4em;
+  }
 }
 
 object {
@@ -24,6 +27,12 @@ object {
 
 .text-descr-container {
   padding: 1em;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px) {
+  .text-descr-container {
+    padding: 0em 2em 0em 2em;
+    font-size: 1.3em;
+  }
 }
 
 .page-title {
@@ -55,9 +64,20 @@ object {
 
 .project-images {
   padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px) {
+  .project-images {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 }
 .project-images img {
   width: 100%;
+  max-width: 20em;
   margin-bottom: 1em;
   -webkit-box-shadow: 1px 1px 5px 1px #adadad;
   -moz-box-shadow: 1px 1px 5px 1px #adadad;

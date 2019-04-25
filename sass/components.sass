@@ -1,8 +1,8 @@
 @import 'vars.sass'
+@import 'mixins.sass'
 
 .icon-container
   text-align: right
-  z-index: 1
   a
     border: 1px solid pink
     height: 100%
@@ -14,13 +14,17 @@
 .close-icon
   height: 3em
   padding: 1em
-  z-index: -1
+  +handheld(2, 768px)
+    height: 4em
 
 object
   pointer-events: none
 
 .text-descr-container
   padding: 1em
+  +handheld(2, 768px)
+    padding: 0em 2em 0em 2em
+    font-size: 1.3em
 
 .page-title
   color: $primary-color
@@ -45,9 +49,16 @@ object
 
 .project-images
   padding: 1em
+  display: flex
+  flex-direction: column
+  align-items: center
+  +handheld(2, 768px)
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-around
   img
-    // border: 1px solid pink
     width: 100%
+    max-width: 20em
     margin-bottom: 1em
     -webkit-box-shadow: 1px 1px 5px 1px rgba(173,173,173,1)
     -moz-box-shadow: 1px 1px 5px 1px rgba(173,173,173,1)
