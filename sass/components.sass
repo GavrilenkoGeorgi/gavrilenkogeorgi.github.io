@@ -16,6 +16,8 @@
   padding: 1em
   +handheld(2, 768px)
     height: 4em
+  +desktop(96dpi, 600px)
+    height: 6em
 
 object
   pointer-events: none
@@ -25,6 +27,13 @@ object
   +handheld(2, 768px)
     padding: 0em 2em 0em 2em
     font-size: 1.3em
+  +handheld(2, 1024px)
+    padding: 0em 4em 0em 4em
+    font-size: 1.6em
+  +desktop(96dpi, 600px)
+    font-size: 1.6em
+  +desktop(96dpi, 1024px)
+    padding: 0em 4em 0em 4em
 
 .page-title
   color: $primary-color
@@ -56,9 +65,15 @@ object
     flex-direction: row
     flex-wrap: wrap
     justify-content: space-around
+  +desktop(96dpi, 600px)
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-around
   img
     width: 100%
     max-width: 20em
+    +handheld(2, 1024px)
+      max-width: 25em
     margin-bottom: 1em
     -webkit-box-shadow: 1px 1px 5px 1px rgba(173,173,173,1)
     -moz-box-shadow: 1px 1px 5px 1px rgba(173,173,173,1)

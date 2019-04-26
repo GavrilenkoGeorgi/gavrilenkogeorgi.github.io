@@ -149,12 +149,12 @@ header, .details, .hero-image, .divider-image {
 }
 @media screen and (max-resolution: 96dpi) and (min-width: 600px) {
   header, .details, .hero-image, .divider-image {
-    height: 15em;
+    height: 20em;
   }
 }
 @media screen and (max-resolution: 96dpi) and (min-width: 1024px) {
   header, .details, .hero-image, .divider-image {
-    height: 20em;
+    height: 30em;
   }
 }
 @media screen and (max-resolution: 96dpi) and (min-width: 1920px) {
@@ -337,6 +337,11 @@ h1, h2 {
     font-size: 2.3em;
   }
 }
+@media screen and (max-resolution: 96dpi) and (min-width: 1024px) {
+  .intro {
+    font-size: 2.7em;
+  }
+}
 @media screen and (max-resolution: 96dpi) and (min-width: 1920px) {
   .intro {
     font-size: 4em;
@@ -361,6 +366,11 @@ h1, h2 {
 @media screen and (max-resolution: 96dpi) and (min-width: 600px) {
   .about {
     font-size: 2em;
+  }
+}
+@media screen and (max-resolution: 96dpi) and (min-width: 1024px) {
+  .about {
+    font-size: 2.2em;
   }
 }
 @media screen and (max-resolution: 96dpi) and (min-width: 1920px) {
@@ -399,6 +409,11 @@ h1, h2 {
 @media screen and (max-resolution: 96dpi) and (min-width: 600px) {
   .pdf-download-link a {
     font-size: 2em;
+  }
+}
+@media screen and (max-resolution: 96dpi) and (min-width: 1024px) {
+  .pdf-download-link a {
+    font-size: 2.6em;
   }
 }
 @media screen and (max-resolution: 96dpi) and (min-width: 1920px) {
@@ -465,6 +480,16 @@ h1, h2 {
     padding: 2em 0em 2em 0em;
   }
 }
+@media screen and (max-resolution: 96dpi) and (min-width: 600px) {
+  .details-section {
+    padding: 2em 0em 2em 0em;
+  }
+}
+@media screen and (max-resolution: 96dpi) and (min-width: 1024px) {
+  .details-section {
+    padding: 4em 0em 4em 0em;
+  }
+}
 
 .project-image {
   height: auto;
@@ -473,6 +498,7 @@ h1, h2 {
   -moz-box-shadow: 1px 1px 5px 1px #adadad;
   box-shadow: 1px 1px 5px 1px #adadad;
 }
+
 .project-descr {
   display: flex;
   flex: 100%;
@@ -510,8 +536,6 @@ ul {
   flex-basis: 0;
   justify-content: center;
   max-width: 100%;
-  font-size: 1.2em;
-  line-height: 1.5em;
 }
 .project-description-text li:first-child {
   margin-bottom: 0.5em;
@@ -534,13 +558,19 @@ ul {
 }
 @media screen and (max-resolution: 96dpi) and (min-width: 600px) {
   .project-description-text {
-    font-size: 1.5em;
-    font-weight: 600;
+    font-size: 1.7em;
+    font-weight: 550;
+  }
+}
+@media screen and (max-resolution: 96dpi) and (min-width: 1024px) {
+  .project-description-text {
+    font-size: 2.2em;
+    font-weight: 575;
   }
 }
 @media screen and (max-resolution: 96dpi) and (min-width: 1920px) {
   .project-description-text {
-    font-size: 2em;
+    font-size: 2.5em;
   }
 }
 

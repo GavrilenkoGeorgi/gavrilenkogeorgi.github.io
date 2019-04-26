@@ -41,9 +41,9 @@ header, .details, .hero-image, .divider-image
   // first dpi then width
   // desktop
   +desktop(96dpi, 600px)
-    height: 15em
-  +desktop(96dpi, 1024px)
     height: 20em
+  +desktop(96dpi, 1024px)
+    height: 30em
   +desktop(96dpi, 1920px)
     height: 40em
 
@@ -148,6 +148,8 @@ article
     font-size: 3em
   +desktop(96dpi, 600px)
     font-size: 2.3em
+  +desktop(96dpi, 1024px)
+    font-size: 2.7em
   +desktop(96dpi, 1920px)
     font-size: 4em
 
@@ -161,6 +163,8 @@ article
     font-size: 2.4em
   +desktop(96dpi, 600px)
     font-size: 2em
+  +desktop(96dpi, 1024px)
+    font-size: 2.2em
   +desktop(96dpi, 1920px)
     font-size: 3em
 
@@ -185,6 +189,8 @@ article
       font-size: 2.7em
     +desktop(96dpi, 600px)
       font-size: 2em
+    +desktop(96dpi, 1024px)
+      font-size: 2.6em
     +desktop(96dpi, 1920px)
       font-size: 4em
 
@@ -225,6 +231,10 @@ article
     padding: 2em
   +handheld(2, 1024px)
     padding: 2em 0em 2em 0em
+  +desktop(96dpi, 600px)
+    padding: 2em 0em 2em 0em
+  +desktop(96dpi, 1024px)
+    padding: 4em 0em 4em 0em
 
 .project-image
   height: auto
@@ -232,7 +242,6 @@ article
   -webkit-box-shadow: 1px 1px 5px 1px rgba(173,173,173,1)
   -moz-box-shadow: 1px 1px 5px 1px rgba(173,173,173,1)
   box-shadow: 1px 1px 5px 1px rgba(173,173,173,1)
-  +handheld(2, 1024px)
 
 .project-descr
   display: flex
@@ -263,17 +272,13 @@ ul
   flex-basis: 0
   justify-content: center
   max-width: 100%
-  font-size: 1.2em
-  line-height: 1.5em
 
   li:first-child
-    // display: flex
     margin-bottom: .5em
     font-size: 1.1em
     font-weight: 700
   li:first-child:hover
     animation-name: pulse
-  // li:nth-child(2)
 
   +handheld(2, 768px)
     font-size: 1.8em
@@ -281,10 +286,13 @@ ul
   +handheld(2, 1024px)
     justify-content: flex-start
   +desktop(96dpi, 600px)
-    font-size: 1.5em
-    font-weight: 600
+    font-size: 1.7em
+    font-weight: 550
+  +desktop(96dpi, 1024px)
+    font-size: 2.2em
+    font-weight: 575
   +desktop(96dpi, 1920px)
-    font-size: 2em
+    font-size: 2.5em
 
 .project-description-text:hover
   li:first-child
