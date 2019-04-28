@@ -40,20 +40,54 @@ document.addEventListener(`DOMContentLoaded`, () => {
   window.addEventListener(`orientationchange`, lazyLoad)
 
   // animate
+  let animating = false
   const animateElements = () => {
     let scrolled = window.pageYOffset
+    const heroHeaderLink = document.querySelector(`.header-link-animated`)
     const heroImage = document.querySelector(`.hero-image`)
-    heroImage.style.top = scrolled * .02 + `em`
-    heroImage.style.opacity = 1 - scrolled * 0.0075
-    // moar stuff
-    heroImage.style.filter = `grayscale(${scrolled * 0.8 + `%`})`
+    // header image and link opacity
+    let headerLinkAndImageOpacity = 1 - scrolled * 0.0075
+    if (headerLinkAndImageOpacity <= 1) {
+      heroImage.style.opacity = headerLinkAndImageOpacity
+      heroHeaderLink.style.opacity = headerLinkAndImageOpacity
+    }
+    // other stuff
+    let heroImageGrayscale = scrolled * 1
+    if (heroImageGrayscale <= 100) {
+      heroImage.style.filter = `grayscale(${heroImageGrayscale + `%`})`
+    }
+    let heroImageTransform = scrolled * .02
+    if (heroImageTransform <= 10 ) {
+      heroImage.style.transform = `translateY(${heroImageTransform}em)`
+    }
 
-    const heroHeaderLink = document.querySelector(`.header-link-animation`)
-    heroHeaderLink.style.opacity = 1 - scrolled * 0.0075
-
+    // details header opacity
     const detailsHeader = document.querySelector(`.details`)
-    detailsHeader.style.opacity = scrolled * 0.004
+    let headerOpacity = scrolled * 0.004
+    if (headerOpacity <= 1) {
+      detailsHeader.style.opacity = scrolled * 0.004
+    }
+
+    const detailsPic = document.querySelector(`.detals-pic`)
+    let grayScalePercent = 100 - scrolled * 0.2
+    if (grayScalePercent > 0) {
+      detailsPic.style.filter = `grayscale(${grayScalePercent + `%`})`
+    }
+
+    // animate it
+    if (animating) {
+      requestAnimationFrame(() => animateElements())
+    }
+    animating = false
   }
+
+  // now with rAF
+  document.addEventListener(`scroll`, () => {
+    console.log(`Scroll called`)
+    animating = !animating
+    requestAnimationFrame(() => animateElements())
+  })
+
   /*
   // debounce
   const debounce = (func, delay) => {
@@ -65,7 +99,6 @@ document.addEventListener(`DOMContentLoaded`, () => {
       inDebounce = setTimeout(() => func.apply(context, args), delay)
     }
   }
-
   // on scroll
   document.addEventListener(`scroll`, debounce(() => {
     animateElements()
@@ -73,6 +106,7 @@ document.addEventListener(`DOMContentLoaded`, () => {
   */
 
   // throttle
+  /*
   const throttle = (fn, wait) => {
     var time = Date.now()
     return () => {
@@ -82,9 +116,9 @@ document.addEventListener(`DOMContentLoaded`, () => {
       }
     }
   }
-
   // throttle on scroll
   document.addEventListener(`scroll`, throttle(animateElements, 16))
+  */
 
   // svg icon color changer
   const getRandomColor = () => {
