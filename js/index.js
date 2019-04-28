@@ -69,7 +69,7 @@ document.addEventListener(`DOMContentLoaded`, () => {
     }
 
     const detailsPic = document.querySelector(`.detals-pic`)
-    let grayScalePercent = 100 - scrolled * 0.2
+    let grayScalePercent = 100 - scrolled * 0.165
     if (grayScalePercent > 0) {
       detailsPic.style.filter = `grayscale(${grayScalePercent + `%`})`
     }
@@ -83,7 +83,6 @@ document.addEventListener(`DOMContentLoaded`, () => {
 
   // now with rAF
   document.addEventListener(`scroll`, () => {
-    console.log(`Scroll called`)
     animating = !animating
     requestAnimationFrame(() => animateElements())
   })
