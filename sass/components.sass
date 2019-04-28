@@ -57,10 +57,10 @@ object
       color: $pale-primary-color
 
 .project-images
-  padding: 1em
   display: flex
   flex-direction: column
   align-items: center
+  padding: 1em
   +handheld(2, 768px)
     flex-direction: row
     flex-wrap: wrap
@@ -69,14 +69,16 @@ object
     flex-direction: row
     flex-wrap: wrap
     justify-content: space-around
-  img
-    width: 100%
-    max-width: 20em
-    +handheld(2, 1024px)
-      max-width: 25em
+  picture
+    max-width: 100%
     margin-bottom: 1em
-    -webkit-box-shadow: 1px 1px 5px 1px rgba(173,173,173,1)
-    -moz-box-shadow: 1px 1px 5px 1px rgba(173,173,173,1)
-    box-shadow: 1px 1px 5px 1px rgba(173,173,173,1)
-  img:last-child
+    img
+      height: auto
+      width: 100%
+      -webkit-box-shadow: 1px 1px 5px 1px rgba(173,173,173,1)
+      -moz-box-shadow: 1px 1px 5px 1px rgba(173,173,173,1)
+      box-shadow: 1px 1px 5px 1px rgba(173,173,173,1)
+    img:last-child
+      margin-bottom: 0em
+  picture:last-child
     margin-bottom: 0em

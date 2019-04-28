@@ -109,6 +109,9 @@ h1, h2
   position: relative
   width: 100%
   top: 0
+  // instead of 3d transform
+  // to create it's own layer
+  backface-visibility: hidden
 
 article
   @extend %flex-col-center
@@ -357,6 +360,10 @@ object
 
 .zero-opacity
   opacity: 0
+
+.grayscale-image
+  -webkit-filter: grayscale(100%) // Safari 6.0 - 9.0
+  filter: grayscale(100%)
 
 .bold-font
   font-variation-settings: "wght" 525

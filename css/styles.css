@@ -272,6 +272,7 @@ h1, h2 {
   position: relative;
   width: 100%;
   top: 0;
+  backface-visibility: hidden;
 }
 
 .resume-section {
@@ -664,6 +665,11 @@ object {
 
 .zero-opacity {
   opacity: 0;
+}
+
+.grayscale-image {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
 .bold-font {
