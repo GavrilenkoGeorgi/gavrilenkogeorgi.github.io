@@ -108,6 +108,12 @@ body {
   box-sizing: border-box;
 }
 
+*:not(html) {
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -120,7 +126,6 @@ body {
   font-size: 16px;
   font-weight: 400;
   direction: ltr;
-  z-index: 1;
 }
 
 .project-description-text, .image-container, .resume-section, article {
@@ -279,7 +284,6 @@ h1, h2 {
   padding: 1.5em;
   padding-bottom: 0em;
   background-color: white;
-  z-index: 1;
 }
 @media screen and (max-resolution: 96dpi) and (min-width: 600px) {
   .resume-section {
@@ -649,10 +653,6 @@ ul {
 /* helpers */
 object {
   pointer-events: none;
-}
-
-.svg-icon-social {
-  z-index: -1;
 }
 
 .image-cover {
