@@ -4,65 +4,65 @@ export const projects = [{
     {
       "imgSrc": [
         `../images/sharlushka/mainScreen.png,`,
-        `../images/sharlushka/mainScreen@2x.png 2x,`,
-        `../images/sharlushka/mainScreen@3x.png 3x`
+        `../images/sharlushka/mainScreen2x.png 2x,`,
+        `../images/sharlushka/mainScreen3x.png 3x`
       ],
       "webpSrc": [
         `../images/sharlushka/mainScreen.webp,`,
-        `../images/sharlushka/mainScreen@2x.webp 2x,`,
-        `../images/sharlushka/mainScreen@3x.webp 3x`
+        `../images/sharlushka/mainScreen2x.webp 2x,`,
+        `../images/sharlushka/mainScreen3x.webp 3x`
       ],
       "alt": `Main game screen.`
     },
     {
       "imgSrc": [
         `../images/sharlushka/statsScreen.png,`,
-        `../images/sharlushka/statsScreen@2x.png 2x,`,
-        `../images/sharlushka/statsScreen@3x.png 3x`
+        `../images/sharlushka/statsScreen2x.png 2x,`,
+        `../images/sharlushka/statsScreen3x.png 3x`
       ],
       "webpSrc": [
         `../images/sharlushka/statsScreen.webp,`,
-        `../images/sharlushka/statsScreen@2x.webp 2x,`,
-        `../images/sharlushka/statsScreen@3x.webp 3x`
+        `../images/sharlushka/statsScreen2x.webp 2x,`,
+        `../images/sharlushka/statsScreen3x.webp 3x`
       ],
       "alt": `User stats screen.`
     },
     {
       "imgSrc": [
         `../images/sharlushka/favoritesScreen.png,`,
-        `../images/sharlushka/favoritesScreen@2x.png 2x,`,
-        `../images/sharlushka/favoritesScreen@3x.png 3x`
+        `../images/sharlushka/favoritesScreen2x.png 2x,`,
+        `../images/sharlushka/favoritesScreen3x.png 3x`
       ],
       "webpSrc": [
         `../images/sharlushka/favoritesScreen.webp,`,
-        `../images/sharlushka/favoritesScreen@2x.webp 2x,`,
-        `../images/sharlushka/favoritesScreen@3x.webp 3x`
+        `../images/sharlushka/favoritesScreen2x.webp 2x,`,
+        `../images/sharlushka/favoritesScreen3x.webp 3x`
       ],
       "alt": `User favorites screen.`
     },
     {
       "imgSrc": [
         `../images/sharlushka/gameScreen.png,`,
-        `../images/sharlushka/gameScreen@2x.png 2x,`,
-        `../images/sharlushka/gameScreen@3x.png 3x`
+        `../images/sharlushka/gameScreen2x.png 2x,`,
+        `../images/sharlushka/gameScreen3x.png 3x`
       ],
       "webpSrc": [
         `../images/sharlushka/gameScreen.webp,`,
-        `../images/sharlushka/gameScreen@2x.webp 2x,`,
-        `../images/sharlushka/gameScreen@3x.webp 3x`
+        `../images/sharlushka/gameScreen2x.webp 2x,`,
+        `../images/sharlushka/gameScreen3x.webp 3x`
       ],
       "alt": `Game screen poker 'ones'.`
     },
     {
       "imgSrc": [
         `../images/sharlushka/pokerSixes.png,`,
-        `../images/sharlushka/pokerSixes@2x.png 2x,`,
-        `../images/sharlushka/pokerSixes@3x.png 3x`
+        `../images/sharlushka/pokerSixes2x.png 2x,`,
+        `../images/sharlushka/pokerSixes3x.png 3x`
       ],
       "webpSrc": [
         `../images/sharlushka/pokerSixes.webp,`,
-        `../images/sharlushka/pokerSixes@2x.webp 2x,`,
-        `../images/sharlushka/pokerSixes@3x.webp 3x`
+        `../images/sharlushka/pokerSixes2x.webp 2x,`,
+        `../images/sharlushka/pokerSixes3x.webp 3x`
       ],
       "alt": `Game screen poker 'sixes'.`
     }
