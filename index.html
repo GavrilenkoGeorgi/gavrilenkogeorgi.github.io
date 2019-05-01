@@ -21,11 +21,13 @@
     <!-- Hero image -->
     <header>
       <picture>
+        <!-- First picture on the page, no lazy load -->
         <source srcset="../images/smartphone.webp,
                         ../images/smartphone@2x.webp 2x,
                         ../images/smartphone@3x.webp 3x"
                 type="image/webp">
-        <img class="hero-image image-cover" src="../images/smartphone.jpg"
+        <img class="hero-image image-cover"
+              src="../images/smartphone.jpg"
               srcset="../images/smartphone@2x.jpg 2x,
                       ../images/smartphone@3x.jpg 3x"
               alt="Close up photo of the smartphone">
@@ -109,14 +111,15 @@
         <aside id="detailsHeader"
           class="details zero-opacity">
           <picture class="detals-pic grayscale-image">
-            <source srcset="../images/bike.webp,
+            <source class="lazy"
+                    data-srcset="../images/bike.webp,
                             ../images/bike@2x.webp 2x,
                             ../images/bike@3x.webp 3x"
                     type="image/webp">
-            <img class="divider-image image-cover"
-                  src="../images/bike.jpg"
-                  srcset="../images/bike@2x.jpg 2x,
-                          ../images/bike@3x.jpg 3x"
+            <img class="divider-image image-cover lazy"
+                  data-src="../images/bike.jpg"
+                  data-srcset="../images/bike@2x.jpg 2x,
+                  ../images/bike@3x.jpg 3x"
                   alt="Close up photo of the bike">
           </picture>
           <!-- Link over photo -->
@@ -144,13 +147,14 @@
             <div class="image-container">
               <a href="html/sharlushka.html">
               <picture>
-                <source srcset="../images/sharlushka.webp,
+                <source class="lazy"
+                        data-srcset="../images/sharlushka.webp,
                                 ../images/sharlushka@2x.webp 2x,
                                 ../images/sharlushka@3x.webp 3x"
                         type="image/webp">
-                <img class="project-image image-fill"
-                      src="images/sharlushka.png"
-                      srcset="images/sharlushka@2x.png 2x,
+                <img class="project-image image-fill lazy"
+                      data-src="images/sharlushka.png"
+                      data-srcset="images/sharlushka@2x.png 2x,
                               images/sharlushka@3x.png 3x"
                       alt="Sharlushka screens">
               </picture>
@@ -176,13 +180,14 @@
           <div class="project-descr">
             <div class="image-container">
               <picture>
-                <source srcset="../images/maxdog.webp,
+                <source class="lazy"
+                        data-srcset="../images/maxdog.webp,
                                 ../images/maxdog@2x.webp 2x,
                                 ../images/maxdog@3x.webp 3x"
                         type="image/webp">
-                <img class="project-image image-fill"
-                      src="images/maxdog.jpg"
-                      srcset="images/maxdog@2x.jpg 2x,
+                <img class="project-image image-fill lazy"
+                      data-src="images/maxdog.jpg"
+                      data-srcset="images/maxdog@2x.jpg 2x,
                               images/maxdog@3x.jpg 3x"
                       alt="maxdog screens">
               </picture>

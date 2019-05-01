@@ -1,7 +1,8 @@
 console.log(`Hi!`)
 
 document.addEventListener(`DOMContentLoaded`, () => {
-  let lazyImages = [].slice.call(document.querySelectorAll(`img.lazy`))
+  let lazyImages = [].slice
+    .call(document.querySelectorAll(`img.lazy, source.lazy`))
   let active = false
 
   const lazyLoad = () => {
@@ -15,8 +16,14 @@ document.addEventListener(`DOMContentLoaded`, () => {
             && lazyImage.getBoundingClientRect().bottom
             >= 0
             && getComputedStyle(lazyImage).display !== `none`) {
-            lazyImage.src = lazyImage.dataset.src
-            lazyImage.srcset = lazyImage.dataset.srcset
+            // if it is a webp source
+            if (lazyImage.dataset.src === undefined) {
+              lazyImage.srcset = lazyImage.dataset.srcset
+            } else { // it is image source set
+              lazyImage.src = lazyImage.dataset.src
+              lazyImage.srcset = lazyImage.dataset.srcset
+            }
+
             lazyImage.classList.remove(`lazy`)
             lazyImages = lazyImages.filter(image => {
               return image !== lazyImage
