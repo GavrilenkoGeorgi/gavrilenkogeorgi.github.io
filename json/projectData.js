@@ -3,7 +3,7 @@ export const projects = [{
   "images": [
     {
       "imgSrc": [
-        `../images/sharlushka/mainScreen.png,`,
+        `../images/sharlushka/mainScreen.png`,
         `../images/sharlushka/mainScreen2x.png 2x,`,
         `../images/sharlushka/mainScreen3x.png 3x`
       ],
@@ -16,7 +16,7 @@ export const projects = [{
     },
     {
       "imgSrc": [
-        `../images/sharlushka/statsScreen.png,`,
+        `../images/sharlushka/statsScreen.png`,
         `../images/sharlushka/statsScreen2x.png 2x,`,
         `../images/sharlushka/statsScreen3x.png 3x`
       ],
@@ -29,7 +29,7 @@ export const projects = [{
     },
     {
       "imgSrc": [
-        `../images/sharlushka/favoritesScreen.png,`,
+        `../images/sharlushka/favoritesScreen.png`,
         `../images/sharlushka/favoritesScreen2x.png 2x,`,
         `../images/sharlushka/favoritesScreen3x.png 3x`
       ],
@@ -42,7 +42,7 @@ export const projects = [{
     },
     {
       "imgSrc": [
-        `../images/sharlushka/gameScreen.png,`,
+        `../images/sharlushka/gameScreen.png`,
         `../images/sharlushka/gameScreen2x.png 2x,`,
         `../images/sharlushka/gameScreen3x.png 3x`
       ],
@@ -55,7 +55,7 @@ export const projects = [{
     },
     {
       "imgSrc": [
-        `../images/sharlushka/pokerSixes.png,`,
+        `../images/sharlushka/pokerSixes.png`,
         `../images/sharlushka/pokerSixes2x.png 2x,`,
         `../images/sharlushka/pokerSixes3x.png 3x`
       ],
