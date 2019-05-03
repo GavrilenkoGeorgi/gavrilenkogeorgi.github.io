@@ -70,10 +70,9 @@ document.addEventListener(`DOMContentLoaded`, () => {
 
     // details header opacity
     const detailsHeader = document.querySelector(`.details`)
-    let headerOpacity = scrolled * 0.004
-    if (headerOpacity <= 1) {
-      detailsHeader.style.opacity = scrolled * 0.004
-    }
+    // navigating back in history causes image
+    // to stay transparent till user scrolls, so
+    detailsHeader.style.opacity = scrolled * 0.004
 
     const detailsPic = document.querySelector(`.detals-pic`)
     let grayScalePercent = 100 - scrolled * 0.165
