@@ -83,7 +83,7 @@ export const projects = [{
     {
       "imgSrc": [
         `../images/maxdog/mainPage.jpg`,
-        `../images/maxdog/mainPage.jpg 2x`
+        `../images/maxdog/mainPage@2x.jpg 2x`
       ],
       "webpSrc": [
         `../images/maxdog/mainPage.webp,`,
@@ -94,7 +94,7 @@ export const projects = [{
     {
       "imgSrc": [
         `../images/maxdog/grooming.jpg`,
-        `../images/maxdog/grooming.jpg 2x`
+        `../images/maxdog/grooming@2x.jpg 2x`
       ],
       "webpSrc": [
         `../images/maxdog/grooming.webp,`,
@@ -105,7 +105,7 @@ export const projects = [{
     {
       "imgSrc": [
         `../images/maxdog/price.png`,
-        `../images/maxdog/price.png 2x`
+        `../images/maxdog/price@2x.png 2x`
       ],
       "webpSrc": [
         `../images/maxdog/price.webp,`,
@@ -116,7 +116,7 @@ export const projects = [{
     {
       "imgSrc": [
         `../images/maxdog/reviews.png`,
-        `../images/maxdog/reviews.png 2x`
+        `../images/maxdog/reviews@2x.png 2x`
       ],
       "webpSrc": [
         `../images/maxdog/reviews.webp,`,

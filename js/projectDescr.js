@@ -73,7 +73,7 @@ import { projects } from "../json/projectData.js"
           source.srcset = webpSrcset
           source.type = `image/webp`
 
-          let imgSrcset = undefined
+          let imgSrcset = ``
           for (let index in image.imgSrc) {
             if (index == 0) {
               // image for default src of img element
