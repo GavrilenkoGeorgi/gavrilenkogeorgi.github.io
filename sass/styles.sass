@@ -126,7 +126,9 @@ article
   padding: 1.5em
   padding-bottom: 0em
   background-color: $page-background-color
-  // z-index: 1
+  // iphoneX
+  +handheld(3, 375px)
+    padding-top: 3em
   +desktop(96dpi, 600px)
     padding-top: 3em
   +desktop(96dpi, 1920px)
@@ -165,6 +167,7 @@ article
   color: $lightest-color
   font-size: 1.15em
   margin: 0em
+  margin-bottom: .3em
   +handheld(2, 768px)
     font-size: 1.8em
   +handheld(2, 1024px)
@@ -175,9 +178,11 @@ article
     font-size: 2.2em
   +desktop(96dpi, 1920px)
     font-size: 3em
-
-.about:nth-child(2)
-  margin-bottom: 0.25em
+  &:last-of-type
+    +handheld(3, 375px)
+      // border: 1px solid green
+      margin-bottom: .3em
+      padding-bottom: 1em
 
 .pdf-download-link
   display: flex
@@ -213,6 +218,8 @@ article
 .more-arrow
   display: flex
   padding-bottom: 1em
+  +handheld(3, 375px)
+    padding: 2em
 
 .more-arrow:hover
   animation-name: pulse

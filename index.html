@@ -111,14 +111,13 @@
         <aside id="detailsHeader"
           class="details zero-opacity">
           <picture class="detals-pic grayscale-image">
-            <source class="lazy"
-                    data-srcset="../images/bike.webp,
+            <source srcset="../images/bike.webp,
                             ../images/bike@2x.webp 2x,
                             ../images/bike@3x.webp 3x"
                     type="image/webp">
-            <img class="divider-image image-cover lazy"
-                  data-src="../images/bike.jpg"
-                  data-srcset="../images/bike@2x.jpg 2x,
+            <img class="divider-image image-cover"
+                  src="../images/bike.jpg"
+                  srcset="../images/bike@2x.jpg 2x,
                   ../images/bike@3x.jpg 3x"
                   alt="Close up photo of the bike">
           </picture>
@@ -179,22 +178,24 @@
           <!-- maxdog.com.ua-->
           <div class="project-descr">
             <div class="image-container">
-              <picture>
-                <source class="lazy"
-                        data-srcset="../images/maxdog.webp,
-                                ../images/maxdog@2x.webp 2x,
-                                ../images/maxdog@3x.webp 3x"
-                        type="image/webp">
-                <img class="project-image image-fill lazy"
-                      data-src="images/maxdog.jpg"
-                      data-srcset="images/maxdog@2x.jpg 2x,
-                              images/maxdog@3x.jpg 3x"
-                      alt="maxdog screens">
-              </picture>
+              <a href="html/maxdog.html">
+                <picture>
+                  <source class="lazy"
+                          data-srcset="../images/maxdog.webp,
+                                  ../images/maxdog@2x.webp 2x,
+                                  ../images/maxdog@3x.webp 3x"
+                          type="image/webp">
+                  <img class="project-image image-fill lazy"
+                        data-src="images/maxdog.jpg"
+                        data-srcset="images/maxdog@2x.jpg 2x,
+                                images/maxdog@3x.jpg 3x"
+                        alt="maxdog screens">
+                </picture>
+              </a>
             </div>
             <ul class="project-description-text">
               <li>
-                <a class="maxdog-link" href="https://maxdog.com.ua"
+                <a class="maxdog-link" href="html/maxdog.html"
                   aria-label="Link to MaxDog website.">
                   maxdog.com.ua
                 </a>
