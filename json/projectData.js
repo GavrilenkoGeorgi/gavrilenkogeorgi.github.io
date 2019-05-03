@@ -76,4 +76,59 @@ export const projects = [{
       humanReadable: `Github repo`,
       link: `https://github.com/GavrilenkoGeorgi/Sharlushka`
     }
-  ]}]
+  ]},
+{
+  "name": `maxdog`,
+  "images": [
+    {
+      "imgSrc": [
+        `../images/maxdog/mainPage.jpg`,
+        `../images/maxdog/mainPage.jpg 2x`
+      ],
+      "webpSrc": [
+        `../images/maxdog/mainPage.webp,`,
+        `../images/maxdog/mainPage@2x.webp 2x`
+      ],
+      "alt": `Maxdog main page screenshot.`
+    },
+    {
+      "imgSrc": [
+        `../images/maxdog/grooming.jpg`,
+        `../images/maxdog/grooming.jpg 2x`
+      ],
+      "webpSrc": [
+        `../images/maxdog/grooming.webp,`,
+        `../images/maxdog/grooming@2x.webp 2x`
+      ],
+      "alt": `Grooming page.`
+    },
+    {
+      "imgSrc": [
+        `../images/maxdog/price.png`,
+        `../images/maxdog/price.png 2x`
+      ],
+      "webpSrc": [
+        `../images/maxdog/price.webp,`,
+        `../images/maxdog/price@2x.webp 2x`
+      ],
+      "alt": `Price viewer.`
+    },
+    {
+      "imgSrc": [
+        `../images/maxdog/reviews.png`,
+        `../images/maxdog/reviews.png 2x`
+      ],
+      "webpSrc": [
+        `../images/maxdog/reviews.webp,`,
+        `../images/maxdog/reviews@2x.webp 2x`
+      ],
+      "alt": `Reviews.`
+    }
+  ],
+  "externalLinks": [
+    {
+      humanReadable: `maxdog.com.ua`,
+      link: `https://maxdog.com.ua`
+    }
+  ]}
+]

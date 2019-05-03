@@ -6,7 +6,6 @@ import { projects } from "../json/projectData.js"
   let supportsCustomElements = `customElements` in window
   if (!supportsCustomElements) {
     console.log(`Custom elements support is ${supportsCustomElements}`)
-    console.log(`Sorry, Safari support comes very soon, check back later.`)
   } else {
     const res = await fetch(`./templates/projectDescrTemplate.html`)
     const textTemplate = await res.text()
@@ -74,7 +73,7 @@ import { projects } from "../json/projectData.js"
           source.srcset = webpSrcset
           source.type = `image/webp`
 
-          let imgSrcset = ``
+          let imgSrcset = undefined
           for (let index in image.imgSrc) {
             if (index == 0) {
               // image for default src of img element
