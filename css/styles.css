@@ -689,4 +689,8 @@ object {
   font-variation-settings: "wght" 525;
 }
 
+.preview {
+  filter: blur(0.1em);
+}
+
 /*# sourceMappingURL=styles.css.map */

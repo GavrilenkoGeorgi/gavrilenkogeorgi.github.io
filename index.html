@@ -63,8 +63,8 @@
             My prior experience includes PHP, MySQL and a basic knowledge of C and Java.<br />
           </p>
           <p class="about">
-            I'm fond of <span class="bold-font">ES6, Web Components, SASS</span> and <span class="bold-font">ESLint</span>. My English is advanced,
-            I speak Ukrainian and Russian is my native language.
+            I'm fond of <span class="bold-font">ES6, Web Components, SASS</span> and <span class="bold-font">ESLint</span>.
+            My English is intermediate (B1), I speak Ukrainian and Russian is my native language.
             Currently living in Kyiv, can relocate.
           </p>
           <div class="pdf-download-link">
@@ -145,13 +145,15 @@
           <div class="project-descr" >
             <div class="image-container">
               <a href="html/sharlushka.html">
-              <picture>
-                <source class="lazy"
+              <picture class="progressive">
+                <source class="preview lazy"
+                        srcset="images/sharlushkaPreview.png"
                         data-srcset="../images/sharlushka.webp,
                                 ../images/sharlushka@2x.webp 2x,
                                 ../images/sharlushka@3x.webp 3x"
                         type="image/webp">
-                <img class="project-image image-fill lazy"
+                <img class="project-image preview image-fill lazy"
+                      src="images/sharlushkaPreview.png"
                       data-src="images/sharlushka.png"
                       data-srcset="images/sharlushka@2x.png 2x,
                               images/sharlushka@3x.png 3x"
@@ -179,13 +181,15 @@
           <div class="project-descr">
             <div class="image-container">
               <a href="html/maxdog.html">
-                <picture>
-                  <source class="lazy"
+                <picture class="progressive">
+                  <source class="preview lazy"
+                          srcset="images/maxdogPreview.jpg"
                           data-srcset="../images/maxdog.webp,
                                   ../images/maxdog@2x.webp 2x,
                                   ../images/maxdog@3x.webp 3x"
                           type="image/webp">
-                  <img class="project-image image-fill lazy"
+                  <img class="project-image preview image-fill lazy"
+                        src="images/maxdogPreview.jpg"
                         data-src="images/maxdog.jpg"
                         data-srcset="images/maxdog@2x.jpg 2x,
                                 images/maxdog@3x.jpg 3x"
@@ -271,5 +275,6 @@
       </div>
     </footer>
     <script src="./js/index.js"></script>
+    <script src="./js/progressiveImage.js"></script>
   </body>
 </html>

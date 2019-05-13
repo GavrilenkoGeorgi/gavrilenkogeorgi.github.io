@@ -14,3 +14,13 @@
   @if length($args) == 2
     @media screen and (-webkit-min-device-pixel-ratio: nth($args, 1)) and (min-width: nth($args, 2))
       @content
+// image blur
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
