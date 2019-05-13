@@ -13,7 +13,7 @@ document.addEventListener(`DOMContentLoaded`, () => {
       heroImage.style.opacity = headerLinkAndImageOpacity
       heroHeaderLink.style.opacity = headerLinkAndImageOpacity
     }
-    // other stuff
+    // grayscale and transform
     let heroImageGrayscale = scrolled * 1
     if (heroImageGrayscale <= 100) {
       heroImage.style.filter = `grayscale(${heroImageGrayscale + `%`})`
@@ -22,15 +22,25 @@ document.addEventListener(`DOMContentLoaded`, () => {
     if (heroImageTransform <= 10 ) {
       heroImage.style.transform = `translateY(${heroImageTransform}em)`
     }
-
-    // details header opacity
+    // details header opacity and grayscale
     const detailsHeader = document.querySelector(`.details`)
-    // navigating back in history causes image
-    // to stay transparent till user scrolls, so
-    detailsHeader.style.opacity = scrolled * 0.004
-
     const detailsPic = document.querySelector(`.detals-pic`)
-    let grayScalePercent = 100 - scrolled * 0.165
+    let currentOpacity = detailsHeader.style.opacity
+    let grayScalePercent = 100 - scrolled * .165
+    let calculatedImageOpacity = (scrolled * 0.004).toFixed(2)
+    // set opacity
+    if (calculatedImageOpacity <= 1
+        || !currentOpacity) {
+      if (calculatedImageOpacity < .05) {
+        calculatedImageOpacity = 0
+      }
+      detailsHeader.style.opacity = calculatedImageOpacity
+    } else {
+      // default values
+      detailsHeader.style.opacity = 1
+      detailsPic.style.filter = `grayscale(0%)`
+    }
+    // set grayscale
     if (grayScalePercent > 0) {
       detailsPic.style.filter = `grayscale(${grayScalePercent + `%`})`
     }
