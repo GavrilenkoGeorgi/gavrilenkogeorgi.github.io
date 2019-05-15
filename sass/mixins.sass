@@ -24,3 +24,9 @@
     @content
   @keyframes #{$name}
     @content
+=filter($first-filter-type,$first-filter-amount,$second-filter-type,$second-filter-amount)
+  -webkit-filter: $first-filter-type+unquote('(#{$first-filter-amount})') $second-filter-type+unquote('(#{$second-filter-amount})')
+  -moz-filter: $first-filter-type+unquote('(#{$first-filter-amount})') $second-filter-type+unquote('(#{$second-filter-amount})')
+  -ms-filter: $first-filter-type+unquote('(#{$first-filter-amount})') $second-filter-type+unquote('(#{$second-filter-amount})')
+  -o-filter: $first-filter-type+unquote('(#{$first-filter-amount})') $second-filter-type+unquote('(#{$second-filter-amount})')
+  filter: $first-filter-type+unquote('(#{$first-filter-amount})') $second-filter-type+unquote('(#{$second-filter-amount})')

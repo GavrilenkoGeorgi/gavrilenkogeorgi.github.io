@@ -1,8 +1,8 @@
+
 document.addEventListener(`DOMContentLoaded`, () => {
   let lazyImages = [].slice
     .call(document.querySelectorAll(`img.lazy, source.lazy`))
   let active = false
-
   const lazyLoad = () => {
     if (active === false) {
       active = true

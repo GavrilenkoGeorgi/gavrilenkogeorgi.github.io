@@ -12,6 +12,9 @@ export const projects = [{
         `../images/sharlushka/mainScreen2x.webp 2x,`,
         `../images/sharlushka/mainScreen3x.webp 3x`
       ],
+      "previewSrc": [
+        `../images/sharlushka/mainScreenPreview.png`
+      ],
       "alt": `Main game screen.`
     },
     {
@@ -24,6 +27,9 @@ export const projects = [{
         `../images/sharlushka/statsScreen.webp,`,
         `../images/sharlushka/statsScreen2x.webp 2x,`,
         `../images/sharlushka/statsScreen3x.webp 3x`
+      ],
+      "previewSrc": [
+        `../images/sharlushka/statsScreenPreview.png`
       ],
       "alt": `User stats screen.`
     },
@@ -38,6 +44,9 @@ export const projects = [{
         `../images/sharlushka/favoritesScreen2x.webp 2x,`,
         `../images/sharlushka/favoritesScreen3x.webp 3x`
       ],
+      "previewSrc": [
+        `../images/sharlushka/favoritesScreenPreview.png`
+      ],
       "alt": `User favorites screen.`
     },
     {
@@ -51,6 +60,9 @@ export const projects = [{
         `../images/sharlushka/gameScreen2x.webp 2x,`,
         `../images/sharlushka/gameScreen3x.webp 3x`
       ],
+      "previewSrc": [
+        `../images/sharlushka/gameScreenPreview.png`
+      ],
       "alt": `Game screen poker 'ones'.`
     },
     {
@@ -63,6 +75,9 @@ export const projects = [{
         `../images/sharlushka/pokerSixes.webp,`,
         `../images/sharlushka/pokerSixes2x.webp 2x,`,
         `../images/sharlushka/pokerSixes3x.webp 3x`
+      ],
+      "previewSrc": [
+        `../images/sharlushka/pokerSixesPreview.png`
       ],
       "alt": `Game screen poker 'sixes'.`
     }
@@ -89,6 +104,9 @@ export const projects = [{
         `../images/maxdog/mainPage.webp,`,
         `../images/maxdog/mainPage@2x.webp 2x`
       ],
+      "previewSrc": [
+        `../images/maxdog/mainPagePreview.jpg`
+      ],
       "alt": `Maxdog main page screenshot.`
     },
     {
@@ -99,6 +117,9 @@ export const projects = [{
       "webpSrc": [
         `../images/maxdog/grooming.webp,`,
         `../images/maxdog/grooming@2x.webp 2x`
+      ],
+      "previewSrc": [
+        `../images/maxdog/groomingPreview.jpg`
       ],
       "alt": `Grooming page.`
     },
@@ -111,6 +132,9 @@ export const projects = [{
         `../images/maxdog/price.webp,`,
         `../images/maxdog/price@2x.webp 2x`
       ],
+      "previewSrc": [
+        `../images/maxdog/pricePreview.png`
+      ],
       "alt": `Price viewer.`
     },
     {
@@ -121,6 +145,9 @@ export const projects = [{
       "webpSrc": [
         `../images/maxdog/reviews.webp,`,
         `../images/maxdog/reviews@2x.webp 2x`
+      ],
+      "previewSrc": [
+        `../images/maxdog/reviewsPreview.png`
       ],
       "alt": `Reviews.`
     }

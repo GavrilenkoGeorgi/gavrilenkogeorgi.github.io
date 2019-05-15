@@ -121,4 +121,12 @@ object {
   margin-bottom: 0em;
 }
 
+.preview {
+  -webkit-filter: grayscale(100%) blur(0.2em);
+  -moz-filter: grayscale(100%) blur(0.2em);
+  -ms-filter: grayscale(100%) blur(0.2em);
+  -o-filter: grayscale(100%) blur(0.2em);
+  filter: grayscale(100%) blur(0.2em);
+}
+
 /*# sourceMappingURL=components.css.map */
