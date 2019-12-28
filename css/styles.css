@@ -138,6 +138,10 @@ a {
   color: #32936f;
 }
 
+.container {
+  width: 100%;
+}
+
 /* header on mobile is this tall */
 header, .details, .hero-image, .divider-image {
   height: 10em;
@@ -691,6 +695,17 @@ object {
 
 .preview {
   filter: blur(0.1em);
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px) {
+  .specs-list-container {
+    display: flex;
+  }
+}
+@media screen and (max-resolution: 96dpi) and (min-width: 768px) {
+  .specs-list-container {
+    display: flex;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -4,381 +4,390 @@
 @import 'mixins.sass'
 
 *, *::before, *::after
-  box-sizing: border-box
+	box-sizing: border-box
 
 *:not(html)
-  -webkit-transform: translate3d(0, 0, 0)
-  -webkit-backface-visibility: hidden
-  -webkit-perspective: 1000
+	-webkit-transform: translate3d(0, 0, 0)
+	-webkit-backface-visibility: hidden
+	-webkit-perspective: 1000
 
 html
-  scroll-behavior: smooth
+	scroll-behavior: smooth
 
 body
-  background-color: $page-background-color
-  padding: 0px
-  margin: 0px
-  width: 100%
-  font-size: 16px
-  font-weight: 400
-  direction: ltr
-  // z-index: 1
+	background-color: $page-background-color
+	padding: 0px
+	margin: 0px
+	width: 100%
+	font-size: 16px
+	font-weight: 400
+	direction: ltr
+	// z-index: 1
 
 // centered column layout
 %flex-col-center
-  display: flex
-  flex-direction: column
-  align-items: center
+	display: flex
+	flex-direction: column
+	align-items: center
 
 a
-  color: $primary-color
+	color: $primary-color
+
+.container
+	width: 100%
 
 /* header on mobile is this tall */
 header, .details, .hero-image, .divider-image
-  height: 10em
-  // first dpr then width
-  // ipad
-  +handheld(2, 768px)
-    height: 20em
-  // ipadPro
-  +handheld(2, 1024px)
-    height: 25em
-  // first dpi then width
-  // desktop
-  +desktop(96dpi, 600px)
-    height: 20em
-  +desktop(96dpi, 1024px)
-    height: 30em
-  +desktop(96dpi, 1920px)
-    height: 40em
+	height: 10em
+	// first dpr then width
+	// ipad
+	+handheld(2, 768px)
+		height: 20em
+	// ipadPro
+	+handheld(2, 1024px)
+		height: 25em
+	// first dpi then width
+	// desktop
+	+desktop(96dpi, 600px)
+		height: 20em
+	+desktop(96dpi, 1024px)
+		height: 30em
+	+desktop(96dpi, 1920px)
+		height: 40em
 
 /* header image link text */
 .hero-link
-  display: flex
-  align-items: center
-  position: relative
-  bottom: 4em
-  color: $almost-white
-  background-color: $overlay-color
-  overflow: hidden
-  +handheld(2, 768px)
-    bottom: 7em
-  +handheld(2, 1024px)
-    bottom: 8em
-  +desktop(96dpi, 600px)
-    bottom: 7em
-  +desktop(96dpi, 1920px)
-    bottom: 15em
+	display: flex
+	align-items: center
+	position: relative
+	bottom: 4em
+	color: $almost-white
+	background-color: $overlay-color
+	overflow: hidden
+	+handheld(2, 768px)
+		bottom: 7em
+	+handheld(2, 1024px)
+		bottom: 8em
+	+desktop(96dpi, 600px)
+		bottom: 7em
+	+desktop(96dpi, 1920px)
+		bottom: 15em
 
 h1, h2
-  margin: 0em
-  color: $almost-white
-  font-size: 1.3em
-  font-variation-settings: "wght" 200
-  +handheld(2, 360px)
-    font-size: 1.2em
-  // iphone plus
-  +handheld(3, 414px)
-    font-size: 1.3em
-    font-weight: 600
-  +handheld(2, 768px)
-    font-size: 2.3em
-    font-weight: 600
-  +handheld(2, 1024px)
-    font-size: 3.3em
-  +desktop(96dpi, 600px)
-    font-size: 3em
-  +desktop(96dpi, 1920px)
-    font-size: 6em
+	margin: 0em
+	color: $almost-white
+	font-size: 1.3em
+	font-variation-settings: "wght" 200
+	+handheld(2, 360px)
+		font-size: 1.2em
+	// iphone plus
+	+handheld(3, 414px)
+		font-size: 1.3em
+		font-weight: 600
+	+handheld(2, 768px)
+		font-size: 2.3em
+		font-weight: 600
+	+handheld(2, 1024px)
+		font-size: 3.3em
+	+desktop(96dpi, 600px)
+		font-size: 3em
+	+desktop(96dpi, 1920px)
+		font-size: 6em
 
 .hero-icon
-  height: 1.8em
-  margin: .5em
-  +handheld(2, 768px)
-    height: 3em
-    margin: .75em
-  +handheld(2, 1024px)
-    height: 3.5em
-    margin: 1em
-  +handheld(2, 1440px)
-    height: 4.5em
-    margin: 1em
-  +desktop(96dpi, 600px)
-    height: 3.5em
-    margin: 1em
-  +desktop(96dpi, 1920px)
-    height: 7em
-    margin: 3em
+	height: 1.8em
+	margin: .5em
+	+handheld(2, 768px)
+		height: 3em
+		margin: .75em
+	+handheld(2, 1024px)
+		height: 3.5em
+		margin: 1em
+	+handheld(2, 1440px)
+		height: 4.5em
+		margin: 1em
+	+desktop(96dpi, 600px)
+		height: 3.5em
+		margin: 1em
+	+desktop(96dpi, 1920px)
+		height: 7em
+		margin: 3em
 
 .hero-image, .divider-image
-  position: relative
-  width: 100%
-  top: 0
-  // instead of 3d transform
-  // to create it's own layer
-  backface-visibility: hidden
+	position: relative
+	width: 100%
+	top: 0
+	// instead of 3d transform
+	// to create it's own layer
+	backface-visibility: hidden
 
 article
-  @extend %flex-col-center
+	@extend %flex-col-center
 
 .resume-section
-  @extend %flex-col-center
-  padding: 1.5em
-  padding-bottom: 0em
-  background-color: $page-background-color
-  // iphoneX
-  +handheld(3, 375px)
-    padding-top: 3em
-  +desktop(96dpi, 600px)
-    padding-top: 3em
-  +desktop(96dpi, 1920px)
-    padding-top: 4em
-  p
-    +handheld(2, 768px)
-      width: 80%
-    +desktop(96dpi, 600px)
-      width: 80%
-    +desktop(96dpi, 1440px)
-      width: 70%
-    +desktop(96dpi, 1920px)
-      width: 60%
+	@extend %flex-col-center
+	padding: 1.5em
+	padding-bottom: 0em
+	background-color: $page-background-color
+	// iphoneX
+	+handheld(3, 375px)
+		padding-top: 3em
+	+desktop(96dpi, 600px)
+		padding-top: 3em
+	+desktop(96dpi, 1920px)
+		padding-top: 4em
+	p
+		+handheld(2, 768px)
+			width: 80%
+		+desktop(96dpi, 600px)
+			width: 80%
+		+desktop(96dpi, 1440px)
+			width: 70%
+		+desktop(96dpi, 1920px)
+			width: 60%
 
 .intro, .about
-  line-height: 1.2em
-  text-indent: 1em
+	line-height: 1.2em
+	text-indent: 1em
 
 .intro
-  color: $text-light-color
-  font-size: 1.35em
-  font-variation-settings: "wght" 500, "wdth" 85
-  margin: 0em 0em .5em 0em
-  +handheld(2, 768px)
-    font-size: 2em
-  +handheld(2, 1024px)
-    font-size: 3em
-  +desktop(96dpi, 600px)
-    font-size: 2.3em
-  +desktop(96dpi, 1024px)
-    font-size: 2.7em
-  +desktop(96dpi, 1920px)
-    font-size: 4em
+	color: $text-light-color
+	font-size: 1.35em
+	font-variation-settings: "wght" 500, "wdth" 85
+	margin: 0em 0em .5em 0em
+	+handheld(2, 768px)
+		font-size: 2em
+	+handheld(2, 1024px)
+		font-size: 3em
+	+desktop(96dpi, 600px)
+		font-size: 2.3em
+	+desktop(96dpi, 1024px)
+		font-size: 2.7em
+	+desktop(96dpi, 1920px)
+		font-size: 4em
 
 .about
-  color: $lightest-color
-  font-size: 1.15em
-  margin: 0em
-  margin-bottom: .3em
-  +handheld(2, 768px)
-    font-size: 1.8em
-  +handheld(2, 1024px)
-    font-size: 2.4em
-  +desktop(96dpi, 600px)
-    font-size: 2em
-  +desktop(96dpi, 1024px)
-    font-size: 2.2em
-  +desktop(96dpi, 1920px)
-    font-size: 3em
-  &:last-of-type
-    +handheld(3, 375px)
-      // border: 1px solid green
-      margin-bottom: .3em
-      padding-bottom: 1em
+	color: $lightest-color
+	font-size: 1.15em
+	margin: 0em
+	margin-bottom: .3em
+	+handheld(2, 768px)
+		font-size: 1.8em
+	+handheld(2, 1024px)
+		font-size: 2.4em
+	+desktop(96dpi, 600px)
+		font-size: 2em
+	+desktop(96dpi, 1024px)
+		font-size: 2.2em
+	+desktop(96dpi, 1920px)
+		font-size: 3em
+	&:last-of-type
+		+handheld(3, 375px)
+			// border: 1px solid green
+			margin-bottom: .3em
+			padding-bottom: 1em
 
 .pdf-download-link
-  display: flex
-  align-items: center
-  align-self: flex-end
+	display: flex
+	align-items: center
+	align-self: flex-end
 
 .pdf-download-link
-  a
-    color: $primary-color
-    font-size: 1.3em
-    font-weight: 500
-    display: flex
-    +handheld(2, 768px)
-      font-size: 2em
-      margin: 1em 0em .5em 0em
-    +handheld(2, 1024px)
-      font-size: 2.7em
-    +desktop(96dpi, 600px)
-      font-size: 2em
-    +desktop(96dpi, 1024px)
-      font-size: 2.6em
-    +desktop(96dpi, 1920px)
-      font-size: 4em
+	a
+		color: $primary-color
+		font-size: 1.3em
+		font-weight: 500
+		display: flex
+		+handheld(2, 768px)
+			font-size: 2em
+			margin: 1em 0em .5em 0em
+		+handheld(2, 1024px)
+			font-size: 2.7em
+		+desktop(96dpi, 600px)
+			font-size: 2em
+		+desktop(96dpi, 1024px)
+			font-size: 2.6em
+		+desktop(96dpi, 1920px)
+			font-size: 4em
 
 .resume-download-icon-container:hover
-  .resume-download-icon
-    animation-name: pulse
+	.resume-download-icon
+		animation-name: pulse
 
 .resume-download-icon
-  height: 2em
-  margin: 0em .5em 0em .5em
+	height: 2em
+	margin: 0em .5em 0em .5em
 
 .more-arrow
-  display: flex
-  padding-bottom: 1em
-  +handheld(3, 375px)
-    padding: 2em
+	display: flex
+	padding-bottom: 1em
+	+handheld(3, 375px)
+		padding: 2em
 
 .more-arrow:hover
-  animation-name: pulse
+	animation-name: pulse
 
 .more-icon
-  height: 3em
-  +handheld(2, 768px)
-    height: 6em
-  +desktop(96dpi, 600px)
-    height: 6em
-  +desktop(96dpi, 1920px)
-    height: 10em
+	height: 3em
+	+handheld(2, 768px)
+		height: 6em
+	+desktop(96dpi, 600px)
+		height: 6em
+	+desktop(96dpi, 1920px)
+		height: 10em
 
 .details
-  width: 100%
-  overflow: hidden
+	width: 100%
+	overflow: hidden
 
 .details-section
-  display: flex
-  flex-direction: row
-  flex-wrap: wrap
-  width: 100%
-  +handheld(2, 768px)
-    padding: 2em
-  +handheld(2, 1024px)
-    padding: 2em 0em 2em 0em
-  +desktop(96dpi, 600px)
-    padding: 2em 0em 2em 0em
-  +desktop(96dpi, 1024px)
-    padding: 4em 0em 4em 0em
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	width: 100%
+	+handheld(2, 768px)
+		padding: 2em
+	+handheld(2, 1024px)
+		padding: 2em 0em 2em 0em
+	+desktop(96dpi, 600px)
+		padding: 2em 0em 2em 0em
+	+desktop(96dpi, 1024px)
+		padding: 4em 0em 4em 0em
 
 .project-image
-  height: auto
-  max-width: 100%
-  -webkit-box-shadow: 1px 1px 5px 1px rgba(173,173,173,1)
-  -moz-box-shadow: 1px 1px 5px 1px rgba(173,173,173,1)
-  box-shadow: 1px 1px 5px 1px rgba(173,173,173,1)
+	height: auto
+	max-width: 100%
+	-webkit-box-shadow: 1px 1px 5px 1px rgba(173,173,173,1)
+	-moz-box-shadow: 1px 1px 5px 1px rgba(173,173,173,1)
+	box-shadow: 1px 1px 5px 1px rgba(173,173,173,1)
 
 .project-descr
-  display: flex
-  flex: 100%
-  padding: .5em
-  +handheld(2, 1024px)
-    flex: 50%
-  +desktop(96dpi, 1024px)
-    flex: 50%
+	display: flex
+	flex: 100%
+	padding: .5em
+	+handheld(2, 1024px)
+		flex: 50%
+	+desktop(96dpi, 1024px)
+		flex: 50%
 
 .project-descr:last-child
-  margin-bottom: 0em
+	margin-bottom: 0em
 
 .image-container
-  @extend %flex-col-center
-  width: 50%
-  text-align: center
+	@extend %flex-col-center
+	width: 50%
+	text-align: center
 
 ul
-  list-style: none
-  text-align: left
-  padding: 0em
-  margin: 0em
+	list-style: none
+	text-align: left
+	padding: 0em
+	margin: 0em
 
 .project-description-text
-  @extend %flex-col-center
-  flex-grow: 1
-  flex-basis: 0
-  justify-content: center
-  max-width: 100%
+	@extend %flex-col-center
+	flex-grow: 1
+	flex-basis: 0
+	justify-content: center
+	max-width: 100%
 
-  li:first-child
-    margin-bottom: .5em
-    font-size: 1.1em
-    font-weight: 700
-  li:first-child:hover
-    animation-name: pulse
+	li:first-child
+		margin-bottom: .5em
+		font-size: 1.1em
+		font-weight: 700
+	li:first-child:hover
+		animation-name: pulse
 
-  +handheld(2, 768px)
-    font-size: 1.8em
-    font-weight: 600
-  +handheld(2, 1024px)
-    justify-content: flex-start
-  +desktop(96dpi, 600px)
-    font-size: 1.7em
-    font-weight: 550
-  +desktop(96dpi, 1024px)
-    font-size: 2.2em
-    font-weight: 575
-  +desktop(96dpi, 1920px)
-    font-size: 2.5em
+	+handheld(2, 768px)
+		font-size: 1.8em
+		font-weight: 600
+	+handheld(2, 1024px)
+		justify-content: flex-start
+	+desktop(96dpi, 600px)
+		font-size: 1.7em
+		font-weight: 550
+	+desktop(96dpi, 1024px)
+		font-size: 2.2em
+		font-weight: 575
+	+desktop(96dpi, 1920px)
+		font-size: 2.5em
 
 .project-description-text:hover
-  li:first-child
-    animation-name: pulse
+	li:first-child
+		animation-name: pulse
 
 .sharlushka-link, .maxdog-link
-  font-variation-settings: "wght" 200
-  line-height: 2
+	font-variation-settings: "wght" 200
+	line-height: 2
 
 .social-links
-  display: flex
-  justify-content: space-around
-  padding: 1em .5em 1em .5em
-  background-color: $pale-primary-color
-  width: 100%
+	display: flex
+	justify-content: space-around
+	padding: 1em .5em 1em .5em
+	background-color: $pale-primary-color
+	width: 100%
 
 .social-links
-  a:hover
-    animation-name: pulse
+	a:hover
+		animation-name: pulse
 
 .social-links-container
-  width: 100%
-  display: flex
-  justify-content: space-around
-  align-items: center
-  align-content: center
-  +handheld(2, 768px)
-    width: 60%
-  +desktop(96dpi, 600px)
-    width: 60%
-  +desktop(96dpi, 1024px)
-    width: 50%
+	width: 100%
+	display: flex
+	justify-content: space-around
+	align-items: center
+	align-content: center
+	+handheld(2, 768px)
+		width: 60%
+	+desktop(96dpi, 600px)
+		width: 60%
+	+desktop(96dpi, 1024px)
+		width: 50%
 
 .social-links-container
-  a
-    display: flex
+	a
+		display: flex
 
 .svg-icon-social
-  height: 1.2em
-  +handheld(2, 768px)
-    height: 2em
-  +desktop(96dpi, 600px)
-    height: 1.7em
-  +desktop(96dpi, 1920px)
-    height: 3em
+	height: 1.2em
+	+handheld(2, 768px)
+		height: 2em
+	+desktop(96dpi, 600px)
+		height: 1.7em
+	+desktop(96dpi, 1920px)
+		height: 3em
 
 .png-icon-social
-  height: 2em
+	height: 2em
 
 /* helpers */
 object
-  pointer-events: none
+	pointer-events: none
 
 .svg-icon-social
-  // z-index: -1
+	// z-index: -1
 
 .image-cover
-  object-fit: cover
+	object-fit: cover
 
 .image-fill
-  object-fit: contain
+	object-fit: contain
 
 .zero-opacity
-  opacity: 0
+	opacity: 0
 
 .grayscale-image
-  -webkit-filter: grayscale(100%) // Safari 6.0 - 9.0
-  filter: grayscale(100%)
+	-webkit-filter: grayscale(100%) // Safari 6.0 - 9.0
+	filter: grayscale(100%)
 
 .bold-font
-  font-variation-settings: "wght" 525
+	font-variation-settings: "wght" 525
 
 .preview
-  filter: blur(.1em)
+	filter: blur(.1em)
+
+.specs-list-container
+	+handheld(2, 768px)
+		display: flex
+	+desktop(96dpi, 768px)
+		display: flex

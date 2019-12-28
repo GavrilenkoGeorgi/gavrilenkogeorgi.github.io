@@ -13,7 +13,7 @@ module.exports = {
         "html/report-bad-indent": "error",
     },
     rules: {
-        "indent": ["error", 2],
+        "indent": ["error", 'tab'],
         "no-trailing-spaces": [1, { "skipBlankLines": false }],
         "no-multiple-empty-lines": ["error", { "max": 1}],
         "no-multi-spaces": "error",
@@ -24,7 +24,7 @@ module.exports = {
         "comma-dangle": ["error", "never"],
         "no-console": "off",
         "generator-star-spacing": "off",
-        "max-len": ["error", { "code": 80 }],
+        "max-len": ["error", { "code": 120 }],
         "spaced-comment": ["error", "always", {
           "line": {
               "markers": ["/"],

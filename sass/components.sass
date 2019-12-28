@@ -2,86 +2,92 @@
 @import 'mixins.sass'
 
 .icon-container
-  text-align: right
-  a
-    border: 1px solid pink
-    height: 100%
-  button
-    background-color: white
-    border: 0em
-    padding: 0em
+	text-align: right
+	a
+		border: 1px solid pink
+		height: 100%
+	button
+		background-color: white
+		border: 0em
+		padding: 0em
 
 .close-icon
-  height: 3em
-  padding: 1em
-  +handheld(2, 768px)
-    height: 4em
-  +desktop(96dpi, 600px)
-    height: 6em
+	height: 3em
+	padding: 1em
+	+handheld(2, 768px)
+		height: 4em
+	+desktop(96dpi, 600px)
+		height: 6em
 
 object
-  pointer-events: none
+	pointer-events: none
 
 .text-descr-container
-  padding: 1em
-  +handheld(2, 768px)
-    padding: 0em 2em 0em 2em
-    font-size: 1.3em
-  +handheld(2, 1024px)
-    padding: 0em 4em 0em 4em
-    font-size: 1.6em
-  +desktop(96dpi, 600px)
-    font-size: 1.6em
-  +desktop(96dpi, 1024px)
-    padding: 0em 4em 0em 4em
+	padding: 1em
+	+handheld(2, 768px)
+		padding: 0em 2em 0em 2em
+		font-size: 1.3em
+	+handheld(2, 1024px)
+		padding: 0em 4em 0em 4em
+		font-size: 1.6em
+	+desktop(96dpi, 600px)
+		font-size: 1.6em
+	+desktop(96dpi, 1024px)
+		padding: 0em 4em 0em 4em
 
 .page-title
-  color: $primary-color
-  margin: 0
-  text-transform: capitalize
-  font-size: 2.5em
+	color: $primary-color
+	margin: 0
+	text-transform: capitalize
+	font-size: 2.5em
 
 .text-descr
-  font-size: 1.3em
-  text-indent: 1em
+	font-size: 1.3em
+	text-indent: 1em
 
 .external-links
-  list-style: none
-  li
-    padding: .4em
-    a
-      color: $primary-color
-      font-size: 1.2em
-      font-variation-settings: "wght" 550
-    a:hover
-      color: $pale-primary-color
+	list-style: none
+	li
+		padding: .4em
+		a
+			color: $primary-color
+			font-size: 1.2em
+			font-variation-settings: "wght" 550
+		a:hover
+			color: $pale-primary-color
 
 .project-images
-  display: flex
-  flex-direction: column
-  align-items: center
-  padding: 1em
-  +handheld(2, 768px)
-    flex-direction: row
-    flex-wrap: wrap
-    justify-content: space-around
-  +desktop(96dpi, 600px)
-    flex-direction: row
-    flex-wrap: wrap
-    justify-content: space-around
-  picture
-    max-width: 100%
-    margin-bottom: 1em
-    img
-      height: auto
-      width: 100%
-      -webkit-box-shadow: 1px 1px 5px 1px rgba(173,173,173,1)
-      -moz-box-shadow: 1px 1px 5px 1px rgba(173,173,173,1)
-      box-shadow: 1px 1px 5px 1px rgba(173,173,173,1)
-    img:last-child
-      margin-bottom: 0em
-  picture:last-child
-    margin-bottom: 0em
+	display: flex
+	flex-direction: column
+	align-items: center
+	padding: 1em
+	+handheld(2, 768px)
+		flex-direction: row
+		flex-wrap: wrap
+		justify-content: space-around
+	+desktop(96dpi, 600px)
+		flex-direction: row
+		flex-wrap: wrap
+		justify-content: space-around
+	picture
+		max-width: 100%
+		margin-bottom: 1em
+		img
+			height: auto
+			width: 100%
+			-webkit-box-shadow: 1px 1px 5px 1px rgba(173,173,173,1)
+			-moz-box-shadow: 1px 1px 5px 1px rgba(173,173,173,1)
+			box-shadow: 1px 1px 5px 1px rgba(173,173,173,1)
+		img:last-child
+			margin-bottom: 0em
+	picture:last-child
+		margin-bottom: 0em
 
 .preview
-  +filter(grayscale,100%,blur,.2em)
+	+filter(grayscale,100%,blur,.2em)
+
+.project-card
+	padding: .1em .75em
+
+.project-title
+	color: $lightest-color
