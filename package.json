@@ -1,28 +1,27 @@
 {
-  "name": "gavrilenkogeorgi.github.io",
-  "version": "0.1.0",
-  "description": "My site.",
-  "main": "js/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sass:styles": "sass --watch sass/styles.sass css/styles.css",
-    "sass:components": "sass --watch sass/components.sass css/components.css"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gavrilenkogeorgi/gavrilenkogeorgi.github.io.git"
-  },
-  "keywords": [],
-  "author": "Gavrilenko",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/gavrilenkogeorgi/gavrilenkogeorgi.github.io/issues"
-  },
-  "homepage": "https://github.com/gavrilenkogeorgi/gavrilenkogeorgi.github.io#readme",
-  "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-config-google": "^0.12.0",
-    "eslint-plugin-html": "^5.0.5",
-    "sass": "^1.24.0"
-  }
+	"name": "gavrilenkogeorgi.github.io",
+	"version": "0.2.0",
+	"description": "Slightly better version of my site",
+	"main": "js/index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"sass:watch": "sass --watch sass:css"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/gavrilenkogeorgi/gavrilenkogeorgi.github.io.git"
+	},
+	"keywords": [],
+	"author": "Gavrilenko",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/gavrilenkogeorgi/gavrilenkogeorgi.github.io/issues"
+	},
+	"homepage": "https://github.com/gavrilenkogeorgi/gavrilenkogeorgi.github.io#readme",
+	"devDependencies": {
+		"eslint": "^5.16.0",
+		"eslint-config-google": "^0.12.0",
+		"eslint-plugin-html": "^5.0.5",
+		"sass": "^1.24.0"
+	}
 }

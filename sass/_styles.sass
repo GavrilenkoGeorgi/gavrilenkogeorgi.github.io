@@ -30,12 +30,6 @@ body
 	flex-direction: column
 	align-items: center
 
-a
-	color: $primary-color
-
-.container
-	width: 100%
-
 /* header on mobile is this tall */
 header, .details, .hero-image, .divider-image
 	height: 10em
@@ -147,7 +141,7 @@ article
 			width: 60%
 
 .intro, .about
-	line-height: 1.2em
+	line-height: 1.4em
 	text-indent: 1em
 
 .intro
@@ -160,9 +154,9 @@ article
 	+handheld(2, 1024px)
 		font-size: 3em
 	+desktop(96dpi, 600px)
-		font-size: 2.3em
+		font-size: 1.7em
 	+desktop(96dpi, 1024px)
-		font-size: 2.7em
+		font-size: 2em
 	+desktop(96dpi, 1920px)
 		font-size: 4em
 
@@ -176,9 +170,9 @@ article
 	+handheld(2, 1024px)
 		font-size: 2.4em
 	+desktop(96dpi, 600px)
-		font-size: 2em
+		font-size: 1.5em
 	+desktop(96dpi, 1024px)
-		font-size: 2.2em
+		font-size: 1.9em
 	+desktop(96dpi, 1920px)
 		font-size: 3em
 	&:last-of-type
@@ -253,13 +247,6 @@ article
 		padding: 2em 0em 2em 0em
 	+desktop(96dpi, 1024px)
 		padding: 4em 0em 4em 0em
-
-.project-image
-	height: auto
-	max-width: 100%
-	-webkit-box-shadow: 1px 1px 5px 1px rgba(173,173,173,1)
-	-moz-box-shadow: 1px 1px 5px 1px rgba(173,173,173,1)
-	box-shadow: 1px 1px 5px 1px rgba(173,173,173,1)
 
 .project-descr
 	display: flex
@@ -386,8 +373,3 @@ object
 .preview
 	filter: blur(.1em)
 
-.specs-list-container
-	+handheld(2, 768px)
-		display: flex
-	+desktop(96dpi, 768px)
-		display: flex

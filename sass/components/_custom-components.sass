@@ -1,0 +1,73 @@
+@import '../mixins.sass'
+@import '../vars.sass'
+
+// all projects list with custom elements <project-spec-list />
+.projects-container
+	padding: 2rem 0 2rem 0
+	width: 100%
+	+desktop(96dpi, 600px)
+		width: 90%
+	+desktop(96dpi, 1024px)
+		width: 75%
+
+.project-card
+	display: flex
+	flex-direction: column
+	+desktop(96dpi, 600px)
+		flex-direction: row
+	+handheld(2, 768px)
+		flex-direction: row
+		padding-right: 2rem
+
+.descr-container
+	padding: 1rem
+	+desktop(96dpi, 600px)
+		padding: 1rem
+	+handheld(2, 768px)
+		font-size: 115%
+	+handheld(2, 1024px)
+		font-size: 150%
+	flex: 1 1 50%
+	ul //specs-list
+		list-style: none
+		text-align: left
+		padding: 0 .5rem 0 .5rem
+	p
+		text-indent: 2rem
+		font-size: 120%
+
+.project-title
+	color: $lightest-color
+	font-size: 200%
+	text-align: center
+	font-variation-settings: "wght" 400
+
+.project-icons-container
+	display: flex
+	padding: 1rem
+	img
+		max-width: 2rem
+		margin: 0 .3rem 0 .3rem
+
+.project-image-container
+	flex: 1 1 50%
+	text-align: center
+	img
+		max-width: 100%
+		border: 1px solid grey
+
+hr.project-divider
+	border: 0
+	height: .075rem
+	margin: 1rem
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0))
+
+// some helpers
+.border-pink
+	border: 1px solid pink
+
+.border-orange
+	border: 1px solid orange
+
+.border-green
+	border: 1px solid green
