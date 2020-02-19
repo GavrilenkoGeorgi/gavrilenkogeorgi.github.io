@@ -1,0 +1,15 @@
+$default-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+
+@font-face
+	font-family: 'IBM Plex Sans Variable'
+	font-display: swap
+	src: local('IBM Plex Sans Variable'), local('IBM-Plex-Sans-Variable')
+	src: url('../fonts/IBMPlexSansVar-Roman.woff2') format('woff2-variations')
+
+body
+	font-family: $default-font
+
+@supports (font-variation-settings: 'wdth' 100)
+	body
+		font-family: 'IBM Plex Sans Variable'
+		font-feature-settings: 'salt', 'ss02'

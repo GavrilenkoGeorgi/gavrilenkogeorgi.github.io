@@ -1,3 +1,213 @@
+.projects-container {
+  padding: 2rem 0 2rem 0;
+  width: 100%;
+}
+@media screen and (max-resolution: 96dpi) and (min-width: 600px) {
+  .projects-container {
+    width: 90%;
+  }
+}
+@media screen and (max-resolution: 96dpi) and (min-width: 1024px) {
+  .projects-container {
+    width: 75%;
+  }
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-resolution: 96dpi) and (min-width: 600px) {
+  .project-card {
+    flex-direction: row;
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px) {
+  .project-card {
+    flex-direction: row;
+    padding-right: 2rem;
+  }
+}
+
+.descr-container {
+  padding: 1rem;
+  flex: 1 1 50%;
+}
+@media screen and (max-resolution: 96dpi) and (min-width: 600px) {
+  .descr-container {
+    padding: 1rem;
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px) {
+  .descr-container {
+    font-size: 115%;
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px) {
+  .descr-container {
+    font-size: 150%;
+  }
+}
+.descr-container ul {
+  list-style: none;
+  text-align: left;
+  padding: 0 0.5rem 0 0.5rem;
+}
+.descr-container p {
+  text-indent: 2rem;
+  font-size: 120%;
+}
+
+.project-title {
+  color: #5f5f5f;
+  font-size: 200%;
+  text-align: center;
+  font-variation-settings: "wght" 400;
+}
+
+.project-icons-container {
+  display: flex;
+  padding: 1rem;
+}
+.project-icons-container img {
+  max-width: 2rem;
+  margin: 0 0.3rem 0 0.3rem;
+}
+
+.project-image-container {
+  flex: 1 1 50%;
+  text-align: center;
+}
+.project-image-container img {
+  max-width: 100%;
+  border: 1px solid grey;
+}
+
+hr.project-divider {
+  border: 0;
+  height: 0.075rem;
+  margin: 1rem;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.border-pink {
+  border: 1px solid pink;
+}
+
+.border-orange {
+  border: 1px solid orange;
+}
+
+.border-green {
+  border: 1px solid green;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans Variable";
+  font-display: swap;
+  src: local("IBM Plex Sans Variable"), local("IBM-Plex-Sans-Variable");
+  src: url("../fonts/IBMPlexSansVar-Roman.woff2") format("woff2-variations");
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@supports (font-variation-settings: "wdth" 100) {
+  body {
+    font-family: "IBM Plex Sans Variable";
+    font-feature-settings: "salt", "ss02";
+  }
+}
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+@-webkit-keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
+}
+@keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
+}
+.flash {
+  -webkit-animation-name: flash;
+  animation-name: flash;
+}
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.2, 1.2, 1.2);
+    transform: scale3d(1.2, 1.2, 1.2);
+  }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.2, 1.2, 1.2);
+    transform: scale3d(1.2, 1.2, 1.2);
+  }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.animated.delay-2s {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+.animated.slow {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+.animated.slower {
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+}
+
+@media (print), (prefers-reduced-motion) {
+  .animated {
+    -webkit-animation: unset !important;
+    animation: unset !important;
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
+}
 @font-face {
   font-family: "IBM Plex Sans Variable";
   font-display: swap;
@@ -132,14 +342,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-a {
-  color: #32936f;
-}
-
-.container {
-  width: 100%;
 }
 
 /* header on mobile is this tall */
@@ -326,7 +528,7 @@ h1, h2 {
 }
 
 .intro, .about {
-  line-height: 1.2em;
+  line-height: 1.4em;
   text-indent: 1em;
 }
 
@@ -348,12 +550,12 @@ h1, h2 {
 }
 @media screen and (max-resolution: 96dpi) and (min-width: 600px) {
   .intro {
-    font-size: 2.3em;
+    font-size: 1.7em;
   }
 }
 @media screen and (max-resolution: 96dpi) and (min-width: 1024px) {
   .intro {
-    font-size: 2.7em;
+    font-size: 2em;
   }
 }
 @media screen and (max-resolution: 96dpi) and (min-width: 1920px) {
@@ -380,12 +582,12 @@ h1, h2 {
 }
 @media screen and (max-resolution: 96dpi) and (min-width: 600px) {
   .about {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 }
 @media screen and (max-resolution: 96dpi) and (min-width: 1024px) {
   .about {
-    font-size: 2.2em;
+    font-size: 1.9em;
   }
 }
 @media screen and (max-resolution: 96dpi) and (min-width: 1920px) {
@@ -511,14 +713,6 @@ h1, h2 {
   .details-section {
     padding: 4em 0em 4em 0em;
   }
-}
-
-.project-image {
-  height: auto;
-  max-width: 100%;
-  -webkit-box-shadow: 1px 1px 5px 1px #adadad;
-  -moz-box-shadow: 1px 1px 5px 1px #adadad;
-  box-shadow: 1px 1px 5px 1px #adadad;
 }
 
 .project-descr {
@@ -697,15 +891,4 @@ object {
   filter: blur(0.1em);
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px) {
-  .specs-list-container {
-    display: flex;
-  }
-}
-@media screen and (max-resolution: 96dpi) and (min-width: 768px) {
-  .specs-list-container {
-    display: flex;
-  }
-}
-
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=index.css.map */

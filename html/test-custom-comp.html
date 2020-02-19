@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Test custom component</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+		<link rel="stylesheet" href="">
+	</head>
+
+	<body>
+		<!--[if lt IE 7]>
+			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+
+		Hi!
+		<test-comp>
+			<img src="../images/bike.jpg">
+		</test-comp>
+
+		<script>
+			const template = document.createElement('template')
+			template.innerHTML = '<style>:host { display: inline-block } </style><slot />'
+
+			class TestCustomComponent extends HTMLElement {
+				constructor () {
+					super ()
+					this.attachShadow({
+						mode: 'open'
+					})
+				}
+				connectedCallback() {
+					this.shadowRoot.appendChild(template.content.cloneNode(true))
+					this.animate([
+						{ transform: 'scale(0) rotate(0deg)' },
+						{ transform: 'scale(1) rotate(1080deg)' },
+						{ transform: 'scale(1) rotate(2160deg)' }
+					], {
+						duration: 10000,
+						easing: 'cubic-bezier(.88,.22,.6,1)',
+						fill: 'forwards'
+					})
+				}
+			}
+			customElements.define('test-comp', TestCustomComponent)
+		</script>
+		<!--script src="" async defer></script-->
+	</body>
+</html>

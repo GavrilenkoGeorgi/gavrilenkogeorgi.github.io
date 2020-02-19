@@ -5,8 +5,8 @@ import { specs } from "../../json/projectsSpecs.js"
 
 (async () => {
 	let supportsCustomElements = `customElements` in window
-	console.log(`Custom list element`)
-	console.log(`specs are`, specs)
+	// console.log(`Custom list element`)
+	// console.log(`specs are`, specs)
 	if (!supportsCustomElements) {
 		console.log(`Custom elements support is ${supportsCustomElements}`)
 	} else {
@@ -31,7 +31,7 @@ import { specs } from "../../json/projectsSpecs.js"
 
 			connectedCallback() {
 				// can add event listener
-				console.log(`List element added`)
+				// console.log(`List element added`)
 				const shadowRoot = this.attachShadow({ mode: `open`})
 				const instance = HTMLTemplate.content.cloneNode(true)
 				shadowRoot.appendChild(instance)
@@ -64,8 +64,21 @@ import { specs } from "../../json/projectsSpecs.js"
 				unorderedList.appendChild(repoLink)
 
 				const liveLink = document.createElement(`li`)
-				liveLink.innerHTML=`<a href="${spec.liveLink}">${spec.liveLink}</a>`
+				liveLink.innerHTML=`Live link: <a href="${spec.liveLink}">${spec.liveLink}</a>`
 				unorderedList.appendChild(liveLink)
+
+				// project image
+				const projectImage = document.createElement(`img`)
+				projectImage.src=`${spec.image}`
+				shadowRoot.querySelector(`.project-image-container`).appendChild(projectImage)
+
+				// project icons
+
+				for (let icon of spec.icons) {
+					const projectIcon = document.createElement(`img`)
+					projectIcon.src=`../../icons/brands/${icon}-brands.svg`
+					shadowRoot.querySelector(`.project-icons-container`).appendChild(projectIcon)
+				}
 			}
 		}
 		customElements.define(`project-spec-list`, ProjectSpecList)
