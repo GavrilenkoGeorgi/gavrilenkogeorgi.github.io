@@ -1,12 +1,9 @@
 // <project-spec-list></project-spec-list>
 
 import { specs } from "../../json/projectsSpecs.js"
-// import progressiveImages from "./progressiveImagesComp.js"
 
 (async () => {
 	let supportsCustomElements = `customElements` in window
-	// console.log(`Custom list element`)
-	// console.log(`specs are`, specs)
 	if (!supportsCustomElements) {
 		console.log(`Custom elements support is ${supportsCustomElements}`)
 	} else {
@@ -31,7 +28,6 @@ import { specs } from "../../json/projectsSpecs.js"
 
 			connectedCallback() {
 				// can add event listener
-				// console.log(`List element added`)
 				const shadowRoot = this.attachShadow({ mode: `open`})
 				const instance = HTMLTemplate.content.cloneNode(true)
 				shadowRoot.appendChild(instance)
@@ -65,6 +61,7 @@ import { specs } from "../../json/projectsSpecs.js"
 
 				const liveLink = document.createElement(`li`)
 				liveLink.innerHTML=`Live link: <a href="${spec.liveLink}">${spec.liveLink}</a>`
+				liveLink.classList.add(`project-live-link`)
 				unorderedList.appendChild(liveLink)
 
 				// project image
@@ -73,7 +70,6 @@ import { specs } from "../../json/projectsSpecs.js"
 				shadowRoot.querySelector(`.project-image-container`).appendChild(projectImage)
 
 				// project icons
-
 				for (let icon of spec.icons) {
 					const projectIcon = document.createElement(`img`)
 					projectIcon.src=`../../icons/brands/${icon}-brands.svg`
