@@ -1,8 +1,8 @@
 export const specs = [
 	{
 		"projectName": `fullstackopen`,
-		"title": `Blog list app backend`,
-		"descr": `Backend for the fullstackopen.com course`,
+		"title": `Blog-list backend`,
+		"descr": `Backend for the app from fullstackopen.com course. User login and registration is done by using JWT tokens. Passwords are encrypted with 'bcrypt'. Object models are build and validated by 'mongoose'. API is tested with Jest.`,
 		"techs": `Node.js, Express, MongoDB, Mongoose, Jest, ESLint`,
 		"liveLink": `https://flstk-open.herokuapp.com`,
 		"repoLink": `https://github.com/GavrilenkoGeorgi/fullstackopen-backend`,
@@ -11,8 +11,8 @@ export const specs = [
 	},
 	{
 		"projectName": `fullstackopen-front`,
-		"title": `Blog list frontend`,
-		"descr": `Frontend for the fullstackopen.com course`,
+		"title": `Blog-list frontend`,
+		"descr": `Frontend for the app from fullstackopen.com course. User can login and register. Logged-in users can add and delete their blog entries, add 'likes' and view all users list.`,
 		"techs": `React, Redux, Redux Thunk, React router, Axios, Bootstrap 4, Cypress, ESLint`,
 		"liveLink": `https://flstk-open.herokuapp.com`,
 		"repoLink": `https://github.com/GavrilenkoGeorgi/bloglist-frontend`,
@@ -22,7 +22,7 @@ export const specs = [
 	{
 		"projectName": `artviva`,
 		"title": `ArtViva school`,
-		"descr": `Frontend for ArtViva school. Frontend for ArtViva school. Client side form validation is done using Formik and Yup. Integrated google maps with the list of all school departments. School facebook group on a separate page. Currently work in progress. Todo: tuition fees payments directly from site using liqpay and backend on node-js.`,
+		"descr": `Frontend for ArtViva school. Client side form validation is done using Formik and Yup. Integrated google maps with the list of all school departments. School facebook group on a separate page. Currently work in progress. Todo: tuition fees payments directly from site using liqpay and backend on node-js.`,
 		"techs": `React, Redux, Redux Thunk, React router, Axios, Bootstrap 4, Cypress, ESLint`,
 		"liveLink": `https://artviva.netlify.com`,
 		"repoLink": `https://github.com/GavrilenkoGeorgi/artviva-frontend`,
@@ -32,7 +32,7 @@ export const specs = [
 	{
 		"projectName": `vdorogu`,
 		"title": `Vdorogu`,
-		"descr": `Mockup of a car sharing service, MVC pattern practice. Users can add, search and delete routes, check if there any routes planned on current date. User account activation and password reset through email.`,
+		"descr": `Mockup of a car sharing service, MVC pattern practice. Users can add, search and delete routes, check if there are any routes planned on the current date. User account activation and password reset through email. Password reset tokens are expired after a certain time. Recaptcha v3 is used in login process.`,
 		"techs": `PHP, MySQL, Twig, JQuery, Bootstrap`,
 		"liveLink": `http://vdorogu.rf.gd`,
 		"repoLink": `https://github.com/GavrilenkoGeorgi/vdorogu`,
@@ -42,8 +42,8 @@ export const specs = [
 	{
 		"projectName": `codebright`,
 		"title": `Test assignment for Codebrightly`,
-		"descr": `CRUD ;) app test assignment.`,
-		"techs": `Vue, Vuex, Vue router, Axios`,
+		"descr": `CRUD ;) app test assignment. Users can leave and delete comments. Validation is done by the means of 'vuelidate'.`,
+		"techs": `Vue, Vuex, Vue router, Axios, SASS`,
 		"liveLink": `https://test-codebrightly.netlify.com`,
 		"repoLink": `https://github.com/GavrilenkoGeorgi/test-codebrightly`,
 		"icons": [`vue`, `axios`, `eslint`],
