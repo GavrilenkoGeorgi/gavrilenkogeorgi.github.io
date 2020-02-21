@@ -1,4 +1,13 @@
+import { date } from './dateAndTime.js'
+
 console.log(`Hi!`)
+
+document.onreadystatechange = () => {
+	if (document.readyState === `complete`) {
+		const footerDate = document.querySelector(`.year`)
+		footerDate.textContent = date()
+	}
+}
 
 document.addEventListener(`DOMContentLoaded`, () => {
 	// animate

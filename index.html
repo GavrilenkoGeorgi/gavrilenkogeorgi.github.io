@@ -7,21 +7,30 @@
 		<meta name="description" content="About me mastering the tech.">
 		<meta name="keywords" content="HTML,CSS,XML,JavaScript,ES6,resume,cv,gavrilenko">
 		<meta name="author" content="Gavrilenko Georgi">
-
+		<!-- Opengraph data -->
 		<meta property="og:title" content="My homepage">
 		<meta property="og:description" content="More info about me and my projects.">
-		<meta property="og:image" content="https://gavrilenkogeorgi.github.io/og_homepage.jpg">
+		<meta property="og:image" content="https://gavrilenkogeorgi.github.io/images/opengraph/og_homepage.jpg">
 		<meta property="og:url" content="https://gavrilenkogeorgi.github.io">
 		<meta property="og:type" content="website">
-		<link rel="stylesheet" href="css/index.css">
-		<!--link rel="stylesheet" href="css/styles.css"-->
-		<link rel="icon" href="favicon.ico?v=2">
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-		<link rel="manifest" href="/site.webmanifest?v=2">
+		<!-- Styles -->
+		<link
+			rel="preload"
+			id="stylesheet"
+			href="css/index.css"
+			as="style"
+			onload="this.rel='stylesheet'"
+		>
+		<!-- Icons -->
+		<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png?v=Rymg6xbdEM">
+		<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png?v=Rymg6xbdEM">
+		<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png?v=Rymg6xbdEM">
+		<link rel="manifest" href="/icons/site.webmanifest?v=Rymg6xbdEM">
+		<link rel="mask-icon" href="/icons/safari-pinned-tab.svg?v=Rymg6xbdEM" color="#2b4570">
+		<link rel="shortcut icon" href="/icons/favicon.ico?v=Rymg6xbdEM">
 		<meta name="msapplication-TileColor" content="#da532c">
-		<meta name="theme-color" content="#32936f">
+		<meta name="msapplication-config" content="/icons/browserconfig.xml?v=Rymg6xbdEM">
+		<meta name="theme-color" content="##2b4570">
 		<title>Gavrilenko</title>
 	</head>
 	<body>
@@ -318,12 +327,21 @@
 				</a>
 			</div>
 			<div class="copyright">
-				<span class="year">2020</span>
+				<span class="year"></span>
 				<span class="message">It ain't much but it's honest work.</span>
 			</div>
 		</footer>
-		<script src="./js/index.js"></script>
-		<script type="module" src="./js/components/projectSpecList.js"></script>
-		<script src="./js/progressiveImages.js"></script>
+		<script type="module" src="./js/index.js" defer></script>
+		<script type="module" src="./js/components/projectSpecList.js" defer></script>
+		<!--script src="./js/progressiveImages.js"></script-->
+		<script>
+			/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+			// eslint-disable-next-line
+			!function(a){'use strict';var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener('load',f),i.media=d||'all'}var g,h=a.document,i=h.createElement('link');if(c)g=c;else{var j=(h.body||h.getElementsByTagName('head')[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel='stylesheet',i.href=b,i.media='only x',e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener('load',f),i.onloadcssdefined=l,l(f),i};'undefined'!=typeof exports?exports.loadCSS=b:a.loadCSS=b}('undefined'!=typeof global?global:this);
+
+			/*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+			// eslint-disable-next-line
+			!function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement('link').relList.supports('preload')}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName('link'),c=0;c<b.length;c++){var d=b[c];'preload'===d.rel&&'style'===d.getAttribute('as')&&(a.loadCSS(d.href,d,d.getAttribute('media')),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener('load',function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent('onload',function(){a.clearInterval(c)})}}}(this);
+		</script>
 	</body>
 </html>

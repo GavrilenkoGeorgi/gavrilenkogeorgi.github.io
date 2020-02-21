@@ -5,7 +5,8 @@ import { specs } from "../../json/projectsSpecs.js"
 (async () => {
 	let supportsCustomElements = `customElements` in window
 	if (!supportsCustomElements) {
-		console.log(`Custom elements support is ${supportsCustomElements}`)
+		console.log(`Custom elements support is ${supportsCustomElements},
+			please use another browser. Will be fixed soon.`)
 	} else {
 		const res = await fetch(`../../html/templates/projectSpecListTemplate.html`)
 		const textTemplate = await res.text()
@@ -67,12 +68,14 @@ import { specs } from "../../json/projectsSpecs.js"
 				// project image
 				const projectImage = document.createElement(`img`)
 				projectImage.src=`${spec.image}`
+				projectImage.alt=`${spec.title} screenshot.`
 				shadowRoot.querySelector(`.project-image-container`).appendChild(projectImage)
 
 				// project icons
 				for (let icon of spec.icons) {
 					const projectIcon = document.createElement(`img`)
 					projectIcon.src=`../../icons/brands/${icon}-brands.svg`
+					projectIcon.alt=`${icon} tech icon.`
 					shadowRoot.querySelector(`.project-icons-container`).appendChild(projectIcon)
 				}
 			}

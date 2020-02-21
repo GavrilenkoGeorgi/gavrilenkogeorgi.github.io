@@ -1,0 +1,20 @@
+{
+	"name": "Gavrilenko",
+	"short_name": "Gavrilenko",
+	"icons": [
+		{
+			"src": "/icons/android-chrome-192x192.png?v=Rymg6xbdEM",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "/icons/android-chrome-512x512.png?v=Rymg6xbdEM",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	],
+	"theme_color": "#2b4570",
+	"background_color": "#a8d0db",
+	"display": "standalone",
+	"start_url": "/"
+}
