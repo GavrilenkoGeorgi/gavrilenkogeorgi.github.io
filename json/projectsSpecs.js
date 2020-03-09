@@ -1,18 +1,18 @@
 export const specs = [
 	{
-		"projectName": `fullstackopen`,
-		"title": `Blog-list backend`,
-		"descr": `Backend for the app from fullstackopen.com course. User login and registration is done by using JWT tokens. Passwords are encrypted with 'bcrypt'. Object models are build and validated by 'mongoose'. API is tested with Jest.`,
+		"projectName": `artviva-backend`,
+		"title": `ArtViva backend`,
+		"descr": `Backend for the ArtViva school site. User login and registration is done by using JWT tokens. Passwords are encrypted with 'bcrypt'. Object models are build and validated by 'mongoose'. API is tested with Jest.`,
 		"techs": `Node.js, Express, MongoDB, Mongoose, Jest, ESLint`,
-		"liveLink": `https://flstk-open.herokuapp.com`,
-		"repoLink": `https://github.com/GavrilenkoGeorgi/fullstackopen-backend`,
+		"liveLink": `https://artviva.herokuapp.com`,
+		"repoLink": `https://github.com/GavrilenkoGeorgi/artviva-backend`,
 		"icons": [`node-js`, `mongodb`, `jest`, `eslint`],
-		"image": `../../images/fullstackopen/bloglist-backend.png`
+		"image": `../../images/artviva/artviva-backend.png`
 	},
 	{
-		"projectName": `fullstackopen-front`,
-		"title": `Blog-list frontend`,
-		"descr": `Frontend for the app from fullstackopen.com course. User can login and register. Logged-in users can add and delete their blog entries, add 'likes' and view all users list.`,
+		"projectName": `fullstackopen`,
+		"title": `Blog app`,
+		"descr": `Blog app from fullstackopen.com course. Users can login and register. Logged-in users can add and delete their blog entries, add 'likes' and view all users list.`,
 		"techs": `React, Redux, Redux Thunk, React router, Axios, Bootstrap 4, Cypress, ESLint`,
 		"liveLink": `https://flstk-open.herokuapp.com`,
 		"repoLink": `https://github.com/GavrilenkoGeorgi/bloglist-frontend`,
@@ -22,7 +22,7 @@ export const specs = [
 	{
 		"projectName": `artviva`,
 		"title": `ArtViva school`,
-		"descr": `Frontend for ArtViva school. Client side form validation is done using Formik and Yup. Integrated google maps with the list of all school departments. School facebook group on a separate page. Currently work in progress. Todo: tuition fees payments directly from site using liqpay and backend on node-js.`,
+		"descr": `Frontend for ArtViva school. Client side form validation is done using Formik and Yup. Integrated google maps with the list of all school departments. School facebook group on a separate page. Currently work in progress. Todo: tuition fees payments directly from the site using liqpay and backend on node-js.`,
 		"techs": `React, Redux, Redux Thunk, React router, Axios, Bootstrap 4, Cypress, ESLint`,
 		"liveLink": `https://artviva.netlify.com`,
 		"repoLink": `https://github.com/GavrilenkoGeorgi/artviva-frontend`,
