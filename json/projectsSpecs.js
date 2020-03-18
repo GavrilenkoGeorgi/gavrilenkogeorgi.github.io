@@ -24,7 +24,7 @@ export const specs = [
 		"title": `ArtViva school`,
 		"descr": `Frontend for ArtViva school. Client side form validation is done using Formik and Yup. Integrated google maps with the list of all school departments. School facebook group on a separate page. Currently work in progress. Todo: tuition fees payments directly from the site using liqpay and backend on node-js.`,
 		"techs": `React, Redux, Redux Thunk, React router, Axios, Bootstrap 4, Cypress, ESLint`,
-		"liveLink": `https://artviva.netlify.com`,
+		"liveLink": `https://artviva.herokuapp.com`,
 		"repoLink": `https://github.com/GavrilenkoGeorgi/artviva-frontend`,
 		"icons": [`react`, `bootstrap`, `axios`, `node-js`, `jest`, `cypress`, `eslint`],
 		"image": `../../images/artviva/artviva-main-page.jpg`
