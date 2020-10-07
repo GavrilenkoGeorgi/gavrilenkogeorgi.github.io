@@ -89,23 +89,25 @@ h1, h2
 		font-size: 6em
 
 .hero-icon
-	height: 1.8em
-	width: 2em
+	// height: 1.8em
+	// width: 3em
+	max-width: 2.5rem
 	margin: .5em
 	+handheld(2, 768px)
-		height: 3em
+		// height: 3em
 		margin: .75em
 	+handheld(2, 1024px)
-		height: 3.5em
+		// height: 3.5em
 		margin: 1em
 	+handheld(2, 1440px)
-		height: 4.5em
+		// height: 4.5em
 		margin: 1em
 	+desktop(96dpi, 600px)
-		height: 3.5em
+		// height: 3.5em
 		margin: 1em
 	+desktop(96dpi, 1920px)
-		height: 7em
+		// height: 7em
+		max-width: 5rem
 		margin: 3em
 
 .hero-image, .divider-image
@@ -124,7 +126,6 @@ article
 	padding: 1.5em
 	padding-bottom: 0em
 	background-color: $page-background-color
-	// iphoneX
 	+handheld(3, 375px)
 		padding-top: 3em
 	+desktop(96dpi, 600px)
@@ -210,9 +211,8 @@ article
 		animation-name: pulse
 
 .resume-download-icon
-	height: 2em
-	width: 2rem
-	margin: 0em .5em 0em .5em
+	max-width: 2.6rem
+	margin: 0em 1.5em 0em .5em
 
 .more-arrow
 	display: flex
